@@ -1,0 +1,199 @@
+//==================================================
+// loading fonts
+//==================================================
+@font-face {
+	font-family: 'Eurostile';
+	src: url('../font/eurostile.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'EurostileExt';
+	src: url('../font/EurostileExt-Normal-Regular.woff2') format('woff2');
+	font-display: swap;
+}
+
+
+
+//==================================================
+// css reset
+//==================================================
+*,
+*:before,
+*:after	{box-sizing: border-box;}
+
+*,
+*:focus,
+*:active,
+*:hover {outline: none;}
+
+@keyframes smoothscroll1 {
+	from, to {scroll-behavior: smooth;}
+}
+
+@keyframes smoothscroll2 {
+	from, to {scroll-behavior: smooth;}
+}
+
+html {
+	animation: smoothscroll1 1s;
+}
+
+html:focus-within {
+	animation-name: smoothscroll2;
+	scroll-behavior: smooth;
+}
+
+body {
+	color: $web_color_5;
+	font-size: 16px;
+	font-family: $web_font_1;
+	margin: 0;
+	background: #000;
+	cursor: url('../img/cursor.cur'), progress !important;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: none; //清除文字在iphone的預設大小
+
+	&.no_overflow {overflow: hidden;}
+}
+
+ol,ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,p {margin: 0;}
+
+a {
+	text-decoration: none;
+	cursor: inherit;
+}
+
+button {
+	padding: 0;
+	border: 0;
+	background: unset;
+	appearance: none;
+	cursor: pointer;
+}
+
+table {
+	width: 100%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+form {
+	width: 100%;
+	margin: 0 auto;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),textarea,select {
+	color: #000;
+	font-size: 14px;
+	font-family: $web_font_1;
+	letter-spacing: 1px;
+	padding: 7px 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	appearance: none;
+
+	&::placeholder {color: #bbb;}
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {appearance: none;}
+input[type="number"] {-moz-appearance:textfield;}
+
+select {
+	max-width: 100%;
+	padding: 7px 25px 7px 10px;
+	// background: #fff url('../img/arrow/arrow05.png') calc(100% - 5px) center no-repeat;
+	cursor: pointer;
+}
+
+.txt_right {text-align: right;}
+.txt_left {text-align: left;}
+.txt_center {text-align: center;}
+.txt_justify {text-align: justify;}
+
+.float_right {float: right;}
+.float_left {float: left;}
+
+.underline {text-decoration: underline;}
+.del {text-decoration: line-through;}
+
+.break_all {word-break: break-all;}
+
+
+
+//==================================================
+// animate
+//==================================================
+@keyframes photo {
+	1%,3% {
+		opacity: 0;
+		filter: brightness(1);
+	}
+	2%,5% {
+		opacity: .2;
+		filter: brightness(1);
+	}
+	7%,9% {
+		opacity: 0;
+		filter: brightness(1);
+	}
+	10%,12% {
+		opacity: .3;
+		filter: brightness(1.2);
+	}
+	15%,17% {
+		opacity: 0;
+		filter: brightness(1);
+	}
+	18%,20% {
+		opacity: .5;
+		filter: brightness(1.1);
+	}
+	100% {
+		opacity: 0;
+		filter: brightness(1);
+	}
+}
+
+@keyframes text {
+	3%,5% {
+		opacity: 1;
+		filter: blur(0);
+	}
+	6%,8% {
+		opacity: .7;
+		filter: blur(5px);
+	}
+	9%,11% {
+		opacity: 1;
+		filter: blur(0);
+	}
+	15%,17% {
+		opacity: .5;
+		filter: blur(5px);
+	}
+	18%,20% {
+		opacity: 1;
+		filter: blur(0);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
+}

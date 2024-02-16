@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+//basic
+@import "scss/basic/config";
+@import "scss/basic/reset";
+@import "scss/basic/grid";
+
+//element
+@import "scss/element/title";
+@import "scss/element/button";
+
+//page
+@import "scss/page/home";
+
+//plugin
+@import "scss/plugin/slick/slick";

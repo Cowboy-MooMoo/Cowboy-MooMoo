@@ -2,60 +2,291 @@
 <html lang="zh-Hant-TW">
 
 	<head>
+		<meta charset="utf-8">
 
-	    <meta charset="utf-8">
+		<title>Cowboy - 切版指揮官</title>
+		<link rel="shortcut icon" href="img/favicon.png">
 
-	    <title>website 空殼123</title>
-	    <link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Core Meta Data -->
+		<meta name="description" content="我是Cowboy，身為一名切版師 / 網頁前端工程師，在網站製作領域已有10年經歷，前後待過3間網頁設計公司，歡迎到艦橋瀏覽我的資訊及代表作品。">
+		<meta name="keywords" content="網站製作, 網頁切版, 系統規劃, 母版開發, HTML, CSS, SCSS, Javascript, jQuery, 接案, 外包">
+		<meta name="author" content="Cowboy">
 
-	    <!-- Behavioral Meta Data -->
-	    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Behavioral Meta Data -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	    <!--關閉瀏覽器自動識別數字為電話號碼、信箱、地址-->
-	    <meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+		<!-- 關閉瀏覽器自動識別數字為電話號碼、信箱、地址 -->
+		<meta name="format-detection" content="telephone=no,email=no,adress=no"/>
 
-	    <!-- Core Meta Data -->
-	    <meta name="description" content="網站介紹">
-	    <meta name="keywords" content="關鍵字">
-	    <meta name="author" content="Cowboy">
+		<!-- Open Graph Meta Data -->
+		<meta property="og:site_name" content="Cowboy - 切版指揮室">
+		<meta property="og:title" content="牛仔的切版指揮室">
+		<meta property="og:description" content="我是牛仔Cowboy，身為一名切版師 / 網頁前端工程師，在網站製作領域已有10年經歷，前後待過3間網頁設計公司，歡迎前往艦橋，在我的指揮室裡瀏覽關於我的資訊及部分作品。">
+		<meta property="og:image" content="網站圖片">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="網址">
 
-	    <!-- Open Graph Meta Data -->
-	    <meta property="og:site_name" content="Cowboy的網站">
-	    <meta property="og:title" content="頁面標題">
-	    <meta property="og:description" content="頁面介紹">
-	    <meta property="og:image" content="網站圖片">
-	    <meta property="og:type" content="website">
-	    <meta property="og:url" content="網址">
+		<!-- Font -->
+		<link rel="stylesheet" type="text/css" href="font/fontawesome/css/font-awesome.min.css">
 
-	    <!-- Fonts -->
-	    <link rel="stylesheet" type="text/css" href="fonts/fontawesome/css/font-awesome.css">
+		<!-- Plugin -->
+		<link rel="stylesheet" type="text/css" href="js/YTPlayer/css/jquery.mb.YTPlayer.min.css">
 
-	    <!-- Basic -->
-	    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
-	    <link rel="stylesheet" type="text/css" href="css/theme.css">
-	    <link rel="stylesheet" type="text/css" href="css/style_xxx.css">
-
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 
-	<body class="" data-page="index">
+	<body data-page="index">
+		<div class="wrap">
 
-  		<p>Hello</p>
-	    
-	    <script src="js/jquery-3.3.1.min.js"></script>
+			<div class="svg_only">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<symbol id="arrow_left" viewBox="0 0 11.1 22.2">
+						<polygon points="11.1,0 11.1,5.7 5.7,11.1 11.1,16.5 11.1,22.2 0,11.1"></polygon>
+					</symbol>
+					<symbol id="arrow_right" viewBox="0 0 11.1 22.2">
+						<polygon points="0,0 0,5.7 5.4,11.1 0,16.5 0,22.2 11.1,11.1"></polygon>
+					</symbol>
+					<symbol id="social_icon_facebook" viewBox="0 0 9.5 19.6">
+						<path d="M9.5 0H6.3s-2-.2-3 1.1c-.8 1.1-.8 2.1-.8 3.1v2.5H0v3.4h2.5v9.4h3.6v-9.4H9l.5-3.4H6.3V4.5s.1-1 1-1h2.2V0z"></path>
+					</symbol>
+					<symbol id="social_icon_twitter" viewBox="0 0 19.1 15.7">
+						<path d="M19.1 1.9c-1 .5-2.1.6-2.1.6C18.6 1.4 18.5.3 18.5.3c-.8.6-2 .9-2.5 1C15.4.5 14.3 0 13.2 0c-2.2 0-4 1.8-4 4 0 .3 0 .6.1.9h-.2C4.3 4.6 1.3.8 1.3.8-.4 4.1 2.4 6 2.4 6 1.5 6 .7 5.5.7 5.5c0 3.2 3.1 3.9 3.1 3.9-.8.3-1.7.1-1.7.1.6 2.4 3.5 2.8 3.5 2.8C4.2 13.9 0 13.9 0 13.9c1.7 1.1 3.8 1.7 6 1.7 6.2 0 11.2-5 11.2-11.2V4v-.2-.1c1.2-.6 1.9-1.8 1.9-1.8z"></path>
+					</symbol>
+					<symbol id="social_icon_vk" viewBox="0 0 24.1 13.8">
+						<path d="M24.1 1c.2.5-.4 1.8-1.9 3.7-.2.3-.5.6-.8 1.1-.7.8-1 1.4-1.1 1.6-.1.3-.1.7.2 1 .1.2.5.5 1 1 1.2 1.1 2 2 2.4 2.8 0 0 .1.1.1.2s.1.2.1.3v.4c0 .1-.1.2-.3.3-.2.1-.4.2-.7.2l-3.2.1c-.2 0-.4 0-.7-.1-.3-.1-.5-.2-.7-.3l-.3-.2c-.3-.2-.5-.4-.9-.8-.3-.4-.6-.7-.9-1-.2-.3-.5-.5-.8-.7-.3-.2-.5-.3-.7-.2h-.1l-.2.2c-.1.1-.2.2-.3.4-.1.1-.2.4-.2.7-.1.3-.1.6-.1 1v.3c0 .1-.1.2-.1.2l-.1.1c-.2.2-.4.3-.7.3h-1.4c-.6 0-1.2 0-1.8-.2-.6-.2-1.2-.4-1.7-.7-.4-.2-.8-.4-1.2-.7-.4-.3-.7-.5-.9-.7l-.3-.3c-.1-.1-.2-.2-.3-.4-.2-.2-.5-.6-.9-1.2-.5-.6-.9-1.2-1.3-1.9-.5-.6-1-1.5-1.6-2.6C1.1 3.8.6 2.7.1 1.5 0 1.3 0 1.2 0 1.1V.9L.1.8C.2.6.5.6.8.6h3.4c.1 0 .2 0 .3.1.1 0 .2.1.2.1h.1c.1.1.2.3.3.4.2.4.4.9.6 1.3l.5 1 .2.4c.2.5.5.9.7 1.3.2.4.4.7.6.9l.5.5c.2.1.3.2.4.2s.2 0 .3-.1l.1-.1s.1-.1.2-.3c.1-.1.1-.3.2-.5s.1-.6.1-1V3.2c0-.3-.1-.6-.1-.9-.1-.3-.1-.5-.2-.6l-.1-.2c-.2-.3-.5-.4-1-.5C8 1 8 .9 8.1.7c.1-.2.3-.3.5-.4.4-.2 1.4-.3 3-.3.7 0 1.3.1 1.7.2.2 0 .3.1.4.2l.3.3c0 .1.1.2.1.3v4.8c0 .2.1.4.1.5l.3.3c.1 0 .1 0 .2.1.1 0 .2 0 .3-.1.1-.1.3-.3.5-.4.2-.2.4-.5.7-.8.3-.4.5-.8.9-1.3.5-.9 1-1.8 1.3-2.8 0-.1.1-.2.1-.2 0-.1.1-.1.1-.1h5.1c.1-.3.3-.2.3-.1l.1.1z"></path>
+					</symbol>
+					<symbol id="social_icon_youtube" viewBox="0 0 20.2 14.1">
+						<path d="M20.2 7s.1-1.7-.2-3.5c-.3-1.8-.8-2.5-1.1-2.9-.3-.4-1.2-.5-1.2-.5S15.3 0 10.9 0H9.3C4.9 0 2.6.2 2.6.2s-.9.1-1.2.5C1 1.1.5 1.7.2 3.5 0 5.3 0 7 0 7s-.1 1.7.2 3.5c.3 1.9.8 2.5 1.2 2.9.3.4 1.2.5 1.2.5s2.3.2 6.7.2h1.6c4.4 0 6.7-.2 6.7-.2s.9-.1 1.2-.5c.3-.4.9-1 1.1-2.9.4-1.7.3-3.4.3-3.5zM8 10.8V3.3L13.8 7 8 10.8z"></path>
+					</symbol>
+					<symbol id="select_toggler_globe" viewBox="0 0 64 64">
+						<path d="M32,7.448C18.461,7.448,7.449,18.462,7.449,32c0,13.538,11.013,24.552,24.551,24.552 c13.538,0,24.551-11.014,24.551-24.552C56.551,18.462,45.538,7.448,32,7.448z M39.68,45.697v-5.55h1.261v5.55H39.68z M53.235,32 c0,0.351-0.036,0.694-0.053,1.041l-0.41-0.41l-3.152,3.152l-3.082-3.082h-2.601l-0.963,0.961l-4.557-4.556v-2.153h-4.438 l-2.544-2.544l-3.129,3.13h3.349l1.306,1.306H36.6l5.904,5.904v1.87l-3.528,3.528v5.746l-4.292,4.292h-1.794l-2.765-2.764v-7.469 l-1.939-1.941h-3.104l-3.201-3.199v-3.491l4.509-3.782v-4.123l7.275-7.273l2.182,2.182h5.044l3.525-3.525 C49.751,18.657,53.235,24.914,53.235,32z M18.312,15.778c0.73-0.616,1.506-1.176,2.316-1.69h9.044l-4.511,4.51h-2.989l-2.12,2.12 h-1.74V15.778z M15.335,18.865v4.212l-3.965,3.965C12.097,24.011,13.465,21.235,15.335,18.865z M10.865,33.997l9.417,7.119v3.492 l-2.803,2.859C13.811,44.021,11.36,39.299,10.865,33.997z"></path>
+					</symbol>
+					<symbol id="audio_on" viewBox="0 0 24 24">
+						<path d="M14.1,1.4v21.2h-2.8L5.6,17V7.1l5.6-5.6H14.1z M20.9,4.5c2,2,3.1,4.7,3.1,7.5c0,2.8-1.1,5.5-3.1,7.5l-1-1 c1.7-1.7,2.7-4,2.7-6.5c0-2.5-1-4.8-2.7-6.5L20.9,4.5z M4.2,7.1V17H2.1C0.9,17,0,16,0,14.9V9.2C0,8,0.9,7.1,2.1,7.1H4.2z M17.9,7.5 c1.2,1.2,1.9,2.8,1.9,4.5c0,1.7-0.7,3.3-1.9,4.5l-1-1c0.9-0.9,1.4-2.2,1.4-3.5c0-1.3-0.5-2.6-1.4-3.5L17.9,7.5z"/></path>
+					</symbol>
+					<symbol id="audio_off" viewBox="0 0 24 24">
+						<path d="M14.1,1.4v21.2h-2.8L5.6,17V7.1l5.6-5.6H14.1z M4.2,7.1V17H2.1C1,17,0,16,0,14.9l0,0V9.2C0,8,0.9,7.1,2.1,7.1 l0,0H4.2z M22.4,8L24,9.6L21.6,12l2.4,2.4l-1.6,1.6l-2.4-2.4l-2.4,2.4l-1.6-1.6l2.4-2.4l-2.4-2.4L17.5,8l2.4,2.4L22.4,8z"/>
+					</symbol>
+				</svg>
+			</div>
 
-	    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-	    <script>
-	    	WebFont.load({
-	    		google: {
-	    			families: ['Noto Sans TC:300,400,500,700','Noto Serif TC:300,400,500,700']
-	    		}
-	    	});
-	    </script>
 
-	    <script src="js/custom.js"></script>
-	    <script src="js/page.js"></script>
 
-  	</body>
+			<div class="bridge">
+				<div id="bridge_view">
+					<div id="space" class="player" data-property="{
+						videoURL: 'EYjdxxWWnxE',
+						containment: '#bridge_view',
+						stopMovieOnBlur: false,
+						showControls: false,
+						showYTLogo: false,
+						anchor: 'center,center',
+						gaTrack: false,
+						mute: true,
+						loop: true,
+						startAt: 0,
+						stopAt: 0,
+						vol: 100,
+						addRaster: false,
+						mask: false,
+						opacity: 1
+					}"></div>
+				</div>
+
+				<div class="bridge_overlay">
+					<svg class="bridge_overlay_backdrop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 800" width="1600" height="800">
+						<defs>
+							<clipPath id="command_room_mask">
+								<path d="M0,0v46l165,29l304,607L0,734v66h1600v-66l-469-52l304-607l165-29V0H0z M1114.3,679.4L808,680v0l-8,0l-8,0v0 l-306.3-0.6L181.3,76.7l68,13.6L402.7,109l236.7,12.8l160.7,7.8l160.7-7.8l236.7-12.8l153.3-18.7l68-13.6L1114.3,679.4z"></path>
+							</clipPath>
+							<linearGradient id="command_room_glare-1" gradientUnits="userSpaceOnUse" x1="381.2055" y1="496.3863" x2="1394.8071" y2="23.7361">
+								<stop offset="0" style="stop-color:#ffffff;stop-opacity:0.1"></stop>
+								<stop offset="0.15" style="stop-color:#ffffff;stop-opacity:0"></stop>
+							</linearGradient>
+							<linearGradient id="command_room_glare-2" gradientUnits="userSpaceOnUse" x1="381.2055" y1="496.3863" x2="1394.8071" y2="23.7361" gradientTransform="matrix(-1 0 0 1 1600.0021 0)">
+								<stop offset="0" style="stop-color:#ffffff;stop-opacity:0.1"></stop>
+								<stop offset="0.15" style="stop-color:#ffffff;stop-opacity:0"></stop>
+							</linearGradient>
+							<linearGradient id="command_room_glare-3" gradientUnits="userSpaceOnUse" x1="800.001" y1="672.501" x2="800.001" y2="71.3333" gradientTransform="matrix(-1 0 0 1 1600.0021 0)">
+								<stop offset="0" style="stop-color:#ffffff;stop-opacity:0.05"></stop>
+								<stop offset="0.15" style="stop-color:#ffffff;stop-opacity:0"></stop>
+							</linearGradient>
+						</defs>
+						<g clip-path="url(#command_room_mask)">
+							<rect fill="#111" width="1600" height="800"></rect>
+							<image xlink:href="img/command-room-overlay.jpg" width="1600" height="800"></image>
+						</g>
+						<polygon fill="url(#command_room_glare-1)" points="1197.3,109 960.7,121.8 800,129.6 639.3,121.8 402.7,109 249.3,90.3 181.3,76.7 485.7,679.4 1114.3,679.4 1418.7,76.7 1350.7,90.3"></polygon>
+						<polygon fill="url(#command_room_glare-2)" points="1197.3,109 960.7,121.8 800,129.6 639.3,121.8 402.7,109 249.3,90.3 181.3,76.7 485.7,679.4 1114.3,679.4 1418.7,76.7 1350.7,90.3"></polygon>
+						<polygon fill="url(#command_room_glare-3)" points="1197.3,109 960.7,121.8 800,129.6 639.3,121.8 402.7,109 249.3,90.3 181.3,76.7 485.7,679.4 1114.3,679.4 1418.7,76.7 1350.7,90.3"></polygon>
+					</svg>
+
+					<div class="bridge_content">
+						<div class="bridge_lockup">
+							<div class="bridge_lockup_content">
+								<div id="bridge_screen">
+									<div id="coding_video" class="player" data-property="{
+										videoURL: 'Z6dIdJX4ens',
+										containment: '#bridge_screen',
+										stopMovieOnBlur: false,
+										showControls: false,
+										showYTLogo: false,
+										anchor: 'center,top',
+										gaTrack: false,
+										mute: true,
+										loop: true,
+										startAt: 0,
+										stopAt: 191,
+										vol: 50,
+										addRaster: false,
+										mask: false,
+										opacity: 1
+									}"></div>
+								</div>
+
+								<img class="cowboy_hat" src="img/logo.png" alt="">
+
+								<h1 class="heading_title">無盡的切版<br>無盡的挑戰</h1>
+							</div>
+						</div>
+
+						<header class="bridge_header">
+							<h1 class="heading_title">無盡的切版，無盡的挑戰</h1>
+						</header>
+
+						<div class="toggle_volume">
+							<p class="space_tip">外面的聲音</p>
+
+							<div class="toggle_volume_space mouseover mousebutton">
+								<svg class="space_off" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+									<use xlink:href="#audio_off"></use>
+								</svg>
+								<svg class="space_on" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+									<use xlink:href="#audio_on"></use>
+								</svg>
+							</div>
+
+							<div class="toggle_volume_coding mouseover mousebutton">
+								<svg class="coding_off" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+									<use xlink:href="#audio_off"></use>
+								</svg>
+								<svg class="coding_on" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+									<use xlink:href="#audio_on"></use>
+								</svg>
+							</div>
+
+							<p class="coding_tip">艦橋的音響</p>
+						</div>
+
+						<div class="get_in_touch">
+							<a class="info_btn mouseover mousebutton" href="javascript:;">
+								<span class="info_btn_inner">傳訊牛仔</span>
+							</a>
+						</div>
+					</div>
+
+					<img class="the_crew" src="img/crew.png" alt="">
+
+					<div class="corner_console">
+						<img src="img/command-room-corner-console.png" alt="">
+						<img src="img/command-room-corner-console-hover.gif" alt="">
+						<a class="mouseover mousedownin" href="javascript:;"></a>
+					</div>
+
+					<div class="dashboard profile">
+
+						<div class="console avatar">
+							<div class="console_screen">
+								<div class="console_inner photo">
+									<div class="console_content">
+										<img src="img/author.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="console info">
+							<div class="console_screen">
+								<div class="console_inner text">
+									<div class="console_content">
+
+										<div class="console_title">
+											<p><span class="sc_style">COWBOY</span></p>
+											<p><span>Front-End Web Developer ( for 10 years )</span></p>
+										</div>
+
+										<div class="console_detail">
+											<p><span>位置:</span>台中市 西屯區</p>
+											<p><span>學歷:</span>逢甲大學 資訊工程學系</p>
+											<p><span>經歷:</span>覺醒設計 2022 - Now</p>
+											<p class="hidden"><span>經歷:</span>百邇來設計行銷 2018 - 2022</p>
+											<p class="hidden"><span>經歷:</span>鼎益盛數位行銷 2014 - 2017</p>
+											<p><span>技能:</span>html , css , scss , javascript , jquery , php , amp</p>
+											<p class="hidden"><span>工具:</span>illustrator , photoshop , figma (not yet)</p>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="console close">
+							<div class="console_screen">
+								<div class="console_inner btn mouseover mousedownout">
+									<div class="console_content">
+										<p>關閉 <span>close</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="console desc">
+							<div class="console_screen">
+								<div class="console_inner text">
+									<div class="console_content">
+
+										<div class="console_detail">
+											<p><span>Hello 您好! 歡迎來到艦橋</span></p>
+											<p class="txt_justify">我是指揮官 Cowboy，本名 李政佳。在網頁領域已有10年經驗，製作過數百個網站。在這個網站裡能夠瀏覽我的部分作品。除了在覺醒設計創建的模組化母版系統等數個公司內部系統之外，還有覺醒設計的所有客戶作品、以及百邇來A方案全客製的作品都是手刻完成；百邇來B方案半客製作品，其首頁同樣也是全客製手刻。鼎益盛的Joomla作品，由於年代久遠，便沒有展示上來。如果您喜歡我的作品，並且有任何與網頁相關的需求，歡迎與我聯繫。</p>
+											<!-- <p><span>信箱:</span><a class="mousebutton" href="mailto:holygamesteven@gmail.com">holygamesteven@gmail.com</a><br><span>電話:</span><a class="mousebutton" href="tel:+886908896803">0908-896-803</a></p> -->
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="dashboard commander"></div>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- Basic -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<!-- Font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {
+					families: [
+						'Source Sans Pro:200,300,400,600,700,900'
+					]
+				}
+			});
+		</script>
+
+		<!-- Plugin -->
+		<script src="js/slick/slick.min.js"></script>
+		<script src="js/YTPlayer/jquery.mb.YTPlayer.min.js"></script>
+
+		<!-- Cowboy -->
+		<script src="js/script.js"></script>
+	</body>
 
 </html>
