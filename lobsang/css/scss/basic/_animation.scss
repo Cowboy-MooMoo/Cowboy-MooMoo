@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+//==================================================
+// global animation settings
+//==================================================
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes goUp {
+	0% {
+		opacity: 0;
+		transform: translate(0, 30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes goDown {
+	0% {
+		opacity: 0;
+		transform: translate(0, -30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes goLeft {
+	0% {
+		opacity: 0;
+		transform: translate(30px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes goRight {
+	0% {
+		opacity: 0;
+		transform: translate(-30px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}

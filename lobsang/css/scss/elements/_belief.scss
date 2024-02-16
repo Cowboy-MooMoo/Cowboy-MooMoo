@@ -1,0 +1,571 @@
+@charset "utf-8";
+
+body.belief {
+	background: url('../images/bg_comments.jpg');
+
+	.preord {
+		@media (min-width: $screenViewSM) {top: 70%;}
+	}
+}
+
+.belief_area {
+	position: relative;
+    margin-top: -35px;
+
+    @media (max-width: $hamburgerPoint) {margin-top: 0;}
+
+	.pagefloatL {
+		position: absolute;
+		top: 5%;
+		left: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR1 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR2 {
+		position: absolute;
+		top: 17%;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.container-fluid {max-width: 1230px;}
+
+	.belief_item {
+		display: flex;
+		align-items: center;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: 1250px) {
+			justify-content: space-evenly !important;
+			margin-bottom: 40px !important;
+		}
+		@media (max-width: $screenViewSM - 1) {
+			justify-content: center !important;
+			flex-direction: column !important;
+		}
+
+		.belief_img {
+			position: relative;
+			opacity: 0;
+
+			@media (max-width: $screenViewSM - 1) {margin-bottom: 30px;}
+
+			.belief_line {
+				transition: all 1s 1.5s ease-in-out;
+
+				@media (max-width: 1250px) {display: none;}
+			}
+
+			&.in {
+				@media (max-width: $screenViewSM - 1) {
+					animation: goUp 0.8s forwards !important;
+				}
+			}
+		}
+
+		.belief_content {
+			opacity: 0;
+
+			div {
+				&:nth-child(2) {
+					display: flex;
+					justify-content: center;
+
+					p {
+						writing-mode: vertical-rl;
+						transition: all 0.3s ease-in-out;
+
+						@media (max-width: $screenViewXS - 1) {
+							line-height: 1.2;
+						}
+					}
+				}
+			}
+
+			&.in {
+				@media (max-width: $screenViewSM - 1) {
+					animation: goUp 0.8s forwards !important;
+				}
+			}
+		}
+
+		&:nth-child(odd) {
+			.belief_img.in {
+				animation: goRight 1.5s ease-in-out forwards;
+			}
+
+			.belief_content.in{
+				animation: goLeft 1.5s ease-in-out forwards;
+			}
+		}
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+
+			.belief_img.in {
+				animation: goLeft 1.5s ease-in-out forwards;
+			}
+
+			.belief_content.in {
+				animation: goRight 1.5s ease-in-out forwards;
+			}
+		}
+
+		&:not(:first-child) {
+			.belief_content {
+				div {
+					&:nth-child(1) {text-align: right;}
+				}
+			}
+		}
+
+		&:not(:nth-child(n+3)) {
+			.belief_content {
+				div {
+					&:nth-child(1) {margin-bottom: 20px;}
+				}
+			}
+		}
+
+		&:nth-child(n+3) {
+			.belief_content {
+				div {
+					&:nth-child(1) {margin-bottom: 30px;}
+				}
+			}
+		}
+
+		&.one {
+			justify-content: space-around;
+
+			margin-bottom: 155px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 85%;
+				    left: 0;
+				    width: 1129px;
+
+					div {
+						position: relative;
+
+						.item1 {
+							position: absolute;
+							top: -80px;
+							left: 50px;
+							animation: itemOne 7s -11s ease-in-out infinite alternate;
+						}
+
+						.item2 {
+							position: absolute;
+							top: 20px;
+							left: 34%;
+						}
+
+						@keyframes itemOne {
+							0% {transform: translate(0px, 0px) rotateY(0deg);}
+							10% {transform: translate(0px, 0px) rotateY(0deg);}
+							33% {transform: translate(-45px, 20px) rotateY(180deg);}
+							66% {transform: translate(-45px, 20px) rotateY(180deg);}
+							90% {transform: translate(50px, 55px) rotateY(0deg);}
+							100% {transform: translate(50px, 55px) rotateY(0deg);}
+						}
+					}
+				}
+			}
+		}
+
+		&.two {
+			justify-content: space-between;
+
+			margin-bottom: 40px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 82.5%;
+				    left: -35px;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+
+					div {
+						position: relative;
+
+						.item {
+							position: absolute;
+							top: 26%;
+							left: 83px;
+							animation: itemTwo 5s -19s ease-in-out infinite alternate;
+						}
+
+						@keyframes itemTwo {
+							0% {transform: translate(20px, -60px);}
+							33% {transform: translate(-20px, 0px);}
+							66% {transform: translate(-20px, 0px);}
+							100% {transform: translate(-30px, 60px);}
+						}
+					}
+				}
+
+				&.in {
+					.belief_line {height: 437px;}
+				}
+			}
+		}
+
+		&.three {
+			justify-content: space-between;
+
+			margin-bottom: 125px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 90%;
+				    right: -20%;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+				}
+
+				&.in {
+					.belief_line {height: 414px;}
+				}
+			}
+		}
+
+		&.four {
+			justify-content: space-between;
+
+			margin-bottom: 80px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 82%;
+				    left: 27%;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+
+				    div {
+				    	position: relative;
+
+				    	.item1 {
+				    		position: absolute;
+				    		top: 34%;
+				    		left: 102px;
+				    		animation: itemFourOne 5s ease-in-out infinite alternate;
+				    	}
+
+				    	.item2 {
+				    		position: absolute;
+				    		top: 44%;
+				    		left: 70px;
+				    		animation: itemFourTwo 5s ease-in-out infinite alternate;
+				    	}
+
+				    	@keyframes itemFourOne {
+							0% {transform: translate(0px, 0px);}
+							33% {transform: translate(10px, -75px);}
+							66% {transform: translate(10px, -75px);}
+							100% {transform: translate(0px, 0px);}
+						}
+
+						@keyframes itemFourTwo {
+							0% {transform: translate(0px, 0px);}
+							33% {transform: translate(-30px, 75px);}
+							66% {transform: translate(-30px, 75px);}
+							100% {transform: translate(0px, 0px);}
+						}
+				    }
+				}
+
+				&.in {
+					.belief_line {height: 469px;}
+				}
+			}
+		}
+
+		&.five {
+			justify-content: space-between;
+
+			margin-bottom: 80px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 92%;
+				    right: -12%;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+				}
+
+				&.in {
+					.belief_line {height: 473px;}
+				}
+			}
+		}
+
+		&.six {
+			justify-content: space-between;
+
+			margin-bottom: 65px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 90%;
+				    left: -11.5%;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+
+				    div {
+				    	position: relative;
+
+				    	.item {
+				    		position: absolute;
+				    		top: 35%;
+				    		left: 90px;
+				    		animation: itemSix 5s -7s ease-in-out infinite alternate;
+				    	}
+
+				    	@keyframes itemSix {
+							0% {transform: translate(30px, -90px);}
+							33% {transform: translate(0px, 0px);}
+							66% {transform: translate(0px, 0px);}
+							100% {transform: translate(-60px, 90px);}
+						}
+				    }
+				}
+
+				&.in {
+					.belief_line {height: 446px;}
+				}
+			}
+		}
+
+		&.seven {
+			justify-content: space-between;
+
+			margin-bottom: 78px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 90%;
+				    right: -38%;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+
+				    div {
+				    	position: relative;
+
+				    	.item {
+				    		position: absolute;
+				    		top: 22%;
+				    		left: 11px;
+				    		animation: itemSeven 5s -15s ease-in-out infinite alternate;
+				    	}
+
+				    	@keyframes itemSeven {
+							0% {transform: translate(0px, 0px);}
+							33% {transform: translate(70px, 115px);}
+							66% {transform: translate(70px, 115px);}
+							100% {transform: translate(0px, 0px);}
+						}
+				    }
+				}
+
+				&.in {
+					.belief_line {height: 406px;}
+				}
+			}
+		}
+
+		&.eight {
+			justify-content: space-between;
+
+			margin-bottom: 58px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 55%;
+				    left: -55%;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+
+				    div {
+				    	position: relative;
+
+				    	.item {
+				    		position: absolute;
+				    		top: 48%;
+				    		left: 54%;
+				    		animation: itemEight 5s -11s ease-in-out infinite alternate;
+				    	}
+
+				    	@keyframes itemEight {
+							0% {transform: translate(105px, -135px) rotateY(0deg);}
+							33% {transform: translate(0px, 0px) rotateY(180deg);}
+							66% {transform: translate(0px, 0px) rotateY(180deg);}
+							100% {transform: translate(-20px, 130px) rotateY(180deg);}
+						}
+				    }
+				}
+
+				&.in {
+					.belief_line {height: 759px;}
+				}
+			}
+		}
+
+		&.nine {
+			justify-content: space-between;
+
+			margin-bottom: 75px;
+
+			.belief_img {
+				.belief_line {
+					position: absolute;
+					top: 95%;
+				    right: -72%;
+				    height: 0;
+				    overflow: hidden;
+				    z-index: -1;
+
+				    div {
+				    	position: relative;
+
+				    	.item {
+				    		position: absolute;
+				    		top: 30%;
+				    		left: 32%;
+				    		animation: itemNine 8s -19s ease-in-out infinite alternate;
+				    	}
+
+				    	@keyframes itemNine {
+							0% {transform: translate(0px, 0px) rotateY(180deg);}
+							5% {transform: translate(0px, 0px) rotateY(180deg);}
+							33% {transform: translate(130px, 110px) rotateY(0deg);}
+							66% {transform: translate(130px, 110px) rotateY(0deg);}
+							95% {transform: translate(0px, 0px) rotateY(180deg);}
+							100% {transform: translate(0px, 0px) rotateY(180deg);}
+						}
+				    }
+				}
+
+				&.in {
+					.belief_line {height: 528px;}
+				}
+			}
+		}
+
+		&.ten {
+			justify-content: space-between;
+		}
+	}
+}
+
+
+
+.belief_anchor {
+	position: fixed;
+	top: 35%;
+	right: 0;
+	z-index: 100;
+
+	@media (max-width: $screenViewSM - 1) {display: none;}
+
+	a[class*="anchor"] {
+		position: relative;
+		display: block;
+		margin-bottom: 10px;
+		padding-right: 30px;
+		width: 130px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: right;
+
+		@media (max-width: $hamburgerPoint) {
+			padding-right: 15px;
+			width: 75px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 30px;
+			width: 100%;
+			height: 1px;
+			background: #999;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $hamburgerPoint) {left: 10px;}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			bottom: -4.5px;
+			left: 20px;
+			width: 10px;
+			height: 10px;
+			background: #999;
+			border: 1px solid #999;
+			border-radius: 50%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $hamburgerPoint) {left: 0px;}
+		}
+
+		&:hover {
+			color: $web_color_1;
+
+			&::before {background: $web_color_1;}
+
+			&::after {
+				background: transparent;
+				border: 1px solid $web_color_1;
+			}
+		}
+
+		&.in {
+			color: $web_color_1;
+
+			&::before {
+				left: 0px;
+				background: $web_color_1;
+			}
+
+			&::after {
+				left: -10px;
+				background: transparent;
+				border: 1px solid $web_color_1;
+			}
+		}
+	}
+}

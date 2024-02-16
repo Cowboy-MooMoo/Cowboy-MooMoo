@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.fontSizingBtn {
+	position: fixed;
+	right: 10px;
+	bottom: 24%;
+	opacity: 1;
+	z-index: 100;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $screenViewXS - 1) {right: 5px;}
+
+	>div {
+		cursor: pointer;
+
+		img {
+			max-width: 60px;
+			transform: scale(0.8);
+			transition: all 0.3s ease-in-out;
+			
+			@media (max-width: $screenViewXS - 1) {max-width: 45px;}
+
+			&:hover {transform: scale(1);}
+		}
+	}
+}

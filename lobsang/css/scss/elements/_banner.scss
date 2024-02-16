@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+//==================================================
+// for all 首頁 bannerType
+//==================================================
+.banner {
+	position: relative;
+	overflow: hidden;
+
+	.slickBanner {
+		.slick-arrow {
+			position: absolute;
+	    	top: 50%;
+			background: rgba(255,255,255,1);
+    		opacity: 0;
+			z-index: 1;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewSM - 1) {display: none !important;}
+
+			i {
+				padding: 6px 16.5px;
+
+				&::before {
+					margin-bottom: 3px;
+					display: block;
+					color: #929292;
+					font-size: 30px;
+					transition: all 0.3s ease-in-out;
+				}
+
+				&::after {
+					display: block;
+					color: #000;
+					text-align: center;
+					font-size: 14px;
+					font-weight: bold;
+					font-family: 'MyriadPro Cond';
+				}
+			}
+
+			&.slick-prev {
+	    		left: 0px;
+	    		transform: translate(-50%,-50%);
+
+	    		i::after {
+	    			content: 'PREV';
+	    		}
+			}
+
+			&.slick-next {
+	    		right: 0px;
+	    		transform: translate(50%,-50%);
+
+	    		i::after {
+	    			content: 'NEXT';
+	    		}
+			}
+
+			&.slick-disabled {
+				background: rgba(255,255,255,0.5) !important;
+			}
+
+			&:not(.slick-disabled):hover {
+				cursor: pointer;
+
+				i::before {color: $web_color_1;}
+			}
+		}
+
+		&:hover {
+			.slick-arrow {
+				opacity: 1;
+				transform: translate(0%,-50%);
+			}
+		}
+	}
+
+	.scrollDown {
+		position: absolute;
+    	left: 50%;
+		cursor: pointer;
+    	transform: translateX(-50%);
+
+    	@media (max-width: $screenViewSM - 1) {display: none;}
+
+    	&.part1 {
+			bottom: 30px;
+    	}
+
+    	&.part2 {
+			bottom: 20px;
+
+			//scrollDown 一般圖檔 搭配 自訂動畫 by css
+	    	&[data-playFrame="css"] {
+	    		animation: scrollDown 2s ease-in-out infinite;
+
+	    		@keyframes scrollDown {
+	    			0% {
+	    				transform: translate(-50%, -15%);
+	    			}
+	    			33% {
+	    				transform: translate(-50%, 0%);
+	    			}
+	    			100% {
+	    				transform: translate(-50%, -15%);
+	    			}
+	    		}
+	    	}
+    	}
+	}
+}
+
+
+
+//==================================================
+// 首頁 bannerType2 style
+//==================================================
+.bannerType2 {
+	.slickBanner {
+		img {
+			&.pc2 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+			}
+
+			&[class^="pc"] {
+				@media (max-width: $hamburgerPoint) {display: none;}
+			}
+
+			&.mb {
+				display: none;
+				@media (max-width: $hamburgerPoint) {display: block;}
+			}
+		}
+
+		.slick-current {
+			img.pc2 {
+				animation: goDown 2s .5s forwards;
+			}
+		}
+	}
+
+	#videoBanner {
+		position: relative;
+		height: 0;
+		padding-bottom: 48.7%;
+		overflow: hidden;
+
+		.video_hover {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.video_cover {
+			position: absolute;
+			display: block;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+
+
+//==================================================
+// 內頁 banner style
+//==================================================

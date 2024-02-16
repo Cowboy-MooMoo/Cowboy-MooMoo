@@ -1,0 +1,959 @@
+@charset "utf-8";
+
+body.home {
+	background: url('../images/background.png') no-repeat;
+	background-position-x: center;
+	background-position-y: 98px;
+	background-size: 100% auto; 
+}
+
+// *.in {animation: goUp 1.5s ease-in-out forwards !important;}
+
+
+//==================================================
+// for block_slogan
+//==================================================
+.block_slogan {
+	padding: 145px 0 70px;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $screenViewXL - 1) {padding: 100px 0 50px;}
+	@media (max-width: $screenViewSM - 1) {padding: 80px 0 40px;}
+
+	p {
+		margin-bottom: 5px;
+		font-size: 48px;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewXL - 1) {font-size: 40px;}
+		@media (max-width: $screenViewSM - 1) {font-size: 34px;}
+		@media (max-width: $screenViewXS - 1) {font-size: 24px;}
+	}
+
+	span {
+		font-size: 18px;
+		line-height: 2;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewXL - 1) {font-size: 16px;}
+		@media (max-width: $screenViewXS - 1) {font-size: 14px;}
+
+		br {
+			@media (max-width: $screenViewXS - 1) {display: none;}
+		}
+	}
+
+	&.in {animation: goUp 1.5s ease-in-out forwards;}
+
+	&.bottom {
+		@media (max-width: $screenViewSM - 1) {
+			padding: 40px 0 60px;
+			text-align: center;
+		}
+
+		&.in {
+			animation: goRight 1.5s ease-in-out forwards;
+		}
+	}
+}
+
+
+
+//==================================================
+// for block_swiper
+//==================================================
+.block_swiper {
+	margin-left: 80px;
+	overflow-x: hidden;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $screenViewSM - 1) {margin-left: 0;}
+
+	.swiper-container {
+		padding-bottom: 50px;
+		overflow: unset;
+
+		.swiper-wrapper {
+			.swiper-slide {
+				width: fit-content;
+				max-width: 100%;
+
+				.first_swiper {
+					.first_content {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: fit-content;
+						height: fit-content;
+						padding: 0 0 50px 50px;
+						transition: all 0.3s ease-in-out;
+
+						@media (max-width: $screenViewSM - 1) {padding: 0 0 30px 30px;}
+						@media (max-width: $screenViewXS - 1) {padding: 0 0 15px 15px;}
+
+						p {
+							color: #fff;
+							font-size: 48px;
+							transition: all 0.3s ease-in-out;
+
+							@media (max-width: $screenViewXL - 1) {font-size: 40px;}
+							@media (max-width: $screenViewSM - 1) {font-size: 34px;}
+							@media (max-width: $screenViewXS - 1) {font-size: 28px;}
+						}
+
+						span {
+							color: #fff;
+							font-size: 18px;
+							transition: all 0.3s ease-in-out;
+
+							@media (max-width: $screenViewXL - 1) {font-size: 16px;}
+							@media (max-width: $screenViewXS - 1) {font-size: 14px;}
+						}
+
+						.btnType1_1 {
+							margin-top: 20px;
+							transition: all 0.3s ease-in-out;
+
+							@media (max-width: $screenViewSM - 1) {margin-top: 10px;}
+						}
+					}
+				}
+				
+				>a,
+				.first_swiper {
+					position: relative;
+					display: block;
+				    height: 615px;
+					overflow: hidden;
+
+					@media (max-width: $screenViewSM - 1) {height: 500px;}
+
+					>img {
+						position: relative;
+						top: 0;
+						left: 50%;
+						width: auto;
+					    height: auto;
+					    max-width: 1920px;
+					    min-height: 100%;
+					    max-height: 100%;
+						transform: translate(-50%, 0) scale(1);
+						transition: all 0.3s ease-in-out;
+					}
+
+					.slide_hover {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: rgba(0,0,0,.45);
+						transition: all 0.3s ease-in-out;
+
+						.slide_content {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							width: fit-content;
+							height: fit-content;
+							transform: translate(-50%, -50%);
+							transition: all 0.3s ease-in-out;
+
+							.slide_icon {
+								height: 169px;
+								overflow: hidden;
+								transition: all 0s ease-in-out;
+
+								@media (max-width: $screenViewSM - 1) {height: 120px;}
+
+								img {
+									height: 169px;
+									opacity: 1;
+									transition: all 0.3s 0.3s ease-in-out;
+
+									@media (max-width: $screenViewSM - 1) {height: 120px;}
+								}
+							}
+
+							p {
+								margin: 20px 0 10px;
+								color: #fff;
+								font-size: 23px;
+								font-weight: bold;
+								transition: all 0.3s ease-in-out;
+
+								@media (max-width: $screenViewSM - 1) {
+									margin: 15px 0 8px;
+									font-size: 20px;
+								}
+							}
+
+							span {
+								color: #fff;
+								font-size: 18px;
+								font-weight: bold;
+
+								@media (max-width: $screenViewSM - 1) {font-size: 16px;}
+							}
+						}
+					}
+
+					&:hover {
+						>img {transform: translate(-50%, 0) scale(1.02);}
+
+						.slide_hover {
+							top: calc(100% - 70px);
+							background: rgba(0,0,0,.65);
+
+							@media (max-width: $screenViewSM - 1) {top: calc(100% - 58px);}
+
+							.slide_icon {
+								height: 0;
+
+								img {
+									opacity: 0;
+									transition: all 0s 0s ease-in-out;
+								}
+							}
+
+							.slide_content {
+								top: 0%;
+								transform: translate(-50%, 0%);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		[class^="swiper-button"] {
+			width: 60px;
+		    height: 60px;
+		    background: #fff;
+		    opacity: 0;
+		    transition: all 0.3s ease-in-out;
+
+		    @media (max-width: $screenViewSM - 1) {display: none;}
+
+		    i {
+		    	&::before {
+		    		margin-bottom: 3px;
+		    		display: block;
+		    		color: #929292;
+		    		font-size: 30px;
+		    		transition: all 0.3s ease-in-out;
+		    	}
+
+		    	&::after {
+		    		display: block;
+		    		color: #000;
+		    		text-align: center;
+		    		font-size: 14px;
+		    		font-weight: bold;
+		    		font-family: 'MyriadPro Cond';
+
+		    	}
+		    }
+
+		    &:after {display: none;}
+
+		    &.swiper-button-disabled {opacity: 0 !important;}
+
+		    &:not(.swiper-button-disabled):hover {
+		    	i::before {color: $web_color_1;}
+		    }
+		}
+
+		.swiper-button-prev {
+			left: 60px;
+
+			i::after {
+				content: 'PREV';
+			}
+		}
+
+		.swiper-button-next {
+			right: 60px;
+
+			i::after {
+    			content: 'NEXT';
+    		}
+		}
+
+		.swiper-scrollbar {
+			bottom: 10px;
+			height: 2px;
+			transition-duration: 300ms !important;
+			transition: all 0.3s ease-in-out;
+
+			.swiper-scrollbar-drag {
+				background: $web_color_1;
+				cursor: pointer;
+			}
+		}
+
+		&:hover {
+			[class^="swiper-button"] {opacity: 1;}
+		}
+	}
+
+	&:hover {
+		.swiper-scrollbar {height: 6px;}
+	}
+}
+
+
+
+//==================================================
+// for block_exp
+//==================================================
+.block_exp {
+	margin-top: -125px;
+	background: url('../images/bg_exp.png') no-repeat left top;
+	background-size: 100% 100%;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $screenViewXL - 1) {margin-top: -100px;}
+	@media (max-width: $screenViewLG - 1) {margin-top: 0;}
+	@media (max-width: $screenViewSM - 1) {
+		padding-bottom: 80px;
+		background: url('../images/bg_exp.png') no-repeat left bottom;
+		background-size: auto 50%;
+	}
+	
+	.slick_exp {
+		.exp_item {
+			img.pc {
+				@media (max-width: $screenViewSM - 1) {display: none;}
+			}
+
+			img.mb {
+				display: none;
+
+				@media (max-width: $screenViewSM - 1) {display: block;}
+			}
+
+			.exp_content {
+				position: absolute;
+				top: 31%;
+				left: 19%;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewXL - 1) {
+					top: 25%;
+					left: 14%;
+				}
+				@media (max-width: $screenViewLG - 1) {
+					top: 6%;
+					left: 9%;
+				}
+				@media (max-width: $screenViewSM - 1) {
+					position: relative;
+					top: unset;
+					left: 50%;
+					width: fit-content;
+					transform: translate(-50%, 0%);
+				}
+				
+				.exp_top {
+					margin-bottom: 30px;
+					width: fit-content;
+				    padding: 2px 20px;
+				    color: $web_color_1;
+				    font-size: 22px;
+				    font-weight: bold;
+				    background: #fff;
+				    border: 1px solid $web_color_1;
+				    transition: all 0.3s ease-in-out;
+
+				    @media (max-width: $screenViewMD - 1) {
+				    	margin-bottom: 20px;
+				    	font-size: 18px;
+				    }
+				}
+
+				.exp_title {
+					font-size: 48px;
+					line-height: 1.2;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewXL - 1) {font-size: 42px;}
+					@media (max-width: $screenViewLG - 1) {font-size: 36px;}
+					@media (max-width: $screenViewMD - 1) {font-size: 30px;}
+					@media (max-width: $screenViewXS - 1) {font-size: 26px;}
+				}
+
+				ul {
+				    margin: 30px 0 70px;
+				    transition: all 0.3s ease-in-out;
+
+				    @media (max-width: $screenViewMD - 1) {margin: 20px 0 30px;}
+
+					li {
+						display: flex;
+    					align-items: flex-end;
+
+						margin-bottom: 22px;
+						font-size: 18px;
+						transition: all 0.3s ease-in-out;
+
+				    	@media (max-width: $screenViewMD - 1) {
+				    		align-items: center;
+				    		margin-bottom: 15px;
+				    		font-size: 16px;
+				    	}
+
+						img {
+							margin-right: 8px;
+						}
+					}
+				}
+
+				.btnType1_1 {
+					flex-direction: column;
+					width: fit-content;
+
+					p {
+						margin-bottom: 7px;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		.slick-dots {
+			position: absolute;
+		    top: 90%;
+		    left: 69%;
+		    transition: all 0.3s ease-in-out;
+
+		    @media (max-width: $screenViewSM - 1) {
+		    	top: 50%;
+		    	left: 75%;
+		    }
+		    @media (max-width: $screenViewXS - 1) {
+		    	top: 43%;
+		    	left: 75%;
+		    }
+
+			li {
+				display: inline-block;
+				padding: 0 7px;
+
+				button {
+					padding: 0;
+					width: 10px;
+					height: 10px;
+					color: transparent;
+					background: #fff;
+					border: 1px solid $web_color_1;
+					border-radius: 50%;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+				}
+
+				&.slick-active {
+					button {background: $web_color_1;}
+				}
+			}
+		}
+	}
+}
+
+
+
+//==================================================
+// for block_book
+//==================================================
+.block_book {
+	position: relative;
+	margin-top: 0px;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $screenViewXL - 1) {margin-top: 50px;}
+	@media (max-width: $screenViewSM - 1) {margin-top: 0px;}
+
+	.slick_book_container {
+		padding-bottom: 125px;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewLG - 1) {padding-bottom: 100px;}
+		@media (max-width: $screenViewMD - 1) {padding-bottom: 75px;}
+		@media (max-width: $screenViewSM - 1) {padding-bottom: 0;}
+
+		.slick_book {
+			width: 100%;
+		    max-width: 55.86%;
+		    transition: all 0.3s ease-in-out;
+
+		    @media (max-width: $screenViewSM - 1) {max-width: 767px;}
+
+		    .book_item {
+		    	div {
+		    		position: relative;
+	    			height: 0;
+	    			padding-bottom: 60.49%;
+	    			overflow: hidden;
+
+	    			img {
+	    				position: absolute;
+    					top: 0;
+    					left: 0;
+    					width: 100%;
+    					height: 100%;
+	    			}
+		    	}
+		    }
+
+	    	.book_line {
+	    		position: absolute;
+	    		top: -50px;
+	    	    left: 30px;
+	            height: calc(100% + 98px);
+	    	    z-index: 5;
+	    	    transition: all 0.3s ease-in-out;
+
+	    	    @media (max-width: $screenViewXS - 1) {left: 15px;}
+	    	}
+
+	    	.books {
+	    		position: absolute;
+	    		top: 78%;
+	    	    left: 78px;
+	            height: calc(100% - 399px);
+	    	    z-index: 5;
+	    	    transition: all 0.3s ease-in-out;
+
+	    	    @media (max-width: $screenViewXL - 1) {
+	    	    	top: 85%;
+	    	    	height: calc(100% - 300px);
+	    	    }
+	    	    @media (max-width: $screenViewLG - 1) {
+	    	    	top: 80%;
+	    	    	height: calc(100% - 200px);
+	    	    }
+	    	    @media (max-width: $screenViewMD - 1) {
+	    	    	top: 85%;
+	    	    }
+	    	    @media (max-width: $screenViewSM - 1) {
+	    	    	top: 80%;
+	    	    	height: calc(100% - 270px);
+	    	    }
+	    	    @media (max-width: $screenViewXS - 1) {
+	    	    	left: 45px;
+	    	    	height: calc(100% - 200px);
+	    	    }
+	    	    @media (max-width: 440px) {
+	    	    	height: calc(100% - 150px);
+	    	    }
+	    	}
+
+			.slick-dots {
+				position: absolute;
+			    bottom: -35px;
+			    left: 50%;
+			    transform: translate(-50%, 0%);
+			    transition: all 0.3s ease-in-out;
+
+				li {
+					display: inline-block;
+					padding: 0 7px;
+
+					button {
+						padding: 0;
+						width: 10px;
+						height: 10px;
+						color: transparent;
+						background: #fff;
+						border: 1px solid $web_color_1;
+						border-radius: 50%;
+						cursor: pointer;
+						transition: all 0.3s ease-in-out;
+					}
+
+					&.slick-active {
+						button {background: $web_color_1;}
+					}
+				}
+			}
+		}
+	}
+
+	.book_content {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		max-width: 52.7%;
+		padding: 6.3% 0 13.1% 11.6%;
+		background: url('../images/bg_book.png') no-repeat;
+		background-size: 100% 100%;
+		overflow: hidden;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewXL - 1) {padding: 4.3% 0 11.1% 11.6%;}
+		@media (max-width: $screenViewLG - 1) {padding: 4.3% 0 8.1% 11.6%;}
+		@media (max-width: $screenViewMD - 1) {padding: 4.3% 0 6% 10%;}
+		@media (max-width: $screenViewSM - 1) {
+			position: unset;
+			right: unset;
+			bottom: unset;
+			max-width: 100%;
+			padding: 80px 15px 40px 15px;
+		}
+		@media (max-width: $screenViewXS - 1) {padding: 60px 15px 40px 15px;}
+		
+		>div {
+			position: relative;
+			width: fit-content;
+			opacity: 0;
+
+			@media (max-width: $screenViewSM - 1) {width: 100%;}
+
+			&.in {animation: goLeft 1.5s ease-in-out forwards;}
+
+			.book_title {
+				font-size: 48px;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewXL - 1) {font-size: 42px;}
+				@media (max-width: $screenViewLG - 1) {font-size: 36px;}
+				@media (max-width: $screenViewMD - 1) {font-size: 30px;}
+				@media (max-width: $screenViewXS - 1) {font-size: 26px;}
+			}
+
+			.book_info {
+				margin: 10px 0 15px;
+				color: $web_color_1;
+				font-size: 20px;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewMD - 1) {
+					margin: 10px 0;
+					font-size: 18px;
+				}
+				@media (max-width: $screenViewXS - 1) {
+				    margin: 10px 0 6px;
+					font-size: 16px;
+				}
+			}
+
+			span {
+				font-size: 18px;
+				line-height: 2;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewMD - 1) {font-size: 16px;}
+				@media (max-width: $screenViewXS - 1) {font-size: 14px;}
+			}
+
+			img {
+				position: absolute;
+				top: 42%;
+				left: 94%;
+
+				@media (max-width: $screenViewSM - 1) {left: calc(50% + 140px);}
+				@media (max-width: $screenViewXS - 1) {
+					top: 38%;
+					left: calc(50% + 110px);
+				}
+			}
+
+			.btnType1_1 {
+				margin-top: 50px;
+				justify-content: center;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewLG - 1) {margin-top: 30px;}
+				@media (max-width: $screenViewMD - 1) {margin-top: 20px;}
+			}
+		}
+	}
+}
+
+
+
+//==================================================
+// for block_floatingBalls
+//==================================================
+.block_floatingBalls {
+	position: relative;
+	padding: 110px 0;
+	background: url('../images/bg_balls.png') no-repeat center top;
+	background-size: 100% 100%;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $screenViewXL - 1) {padding: 70px 0;}
+	@media (max-width: $screenViewMD - 1) {padding: 40px 0;}
+
+	.ballsInfo {
+		opacity: 0;
+
+		&.in {animation: goRight 1.5s ease-in-out forwards;}
+
+		p {
+			font-size: 18px;
+			line-height: 2;
+		    margin-bottom: 20px;
+		    transition: all 0.3s ease-in-out;
+
+		    @media (max-width: $screenViewMD - 1) {font-size: 16px;}
+		}
+
+		@media (max-width: $screenViewSM - 1) {
+			text-align: center;
+
+			.btnType1_1 {justify-content: center;}
+		}
+	}
+
+	.threeballs {
+		position: absolute;
+		bottom: 0%;
+		right: 0%;
+		width: 100%;
+		height: 150%;
+		max-width: 1015px;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewXL - 1) {max-width: 750px;}
+		@media (min-width: $hamburgerPoint + 1) and (max-width: $screenViewXL - 1) {overflow: hidden;}
+		@media (max-width: $screenViewLG - 1) {max-width: 680px;}
+		@media (max-width: $screenViewMD - 1) {max-width: 420px;}
+		@media (max-width: $screenViewSM - 1) {
+			margin: 0 auto;
+			position: relative;
+			bottom: unset;
+			right: unset;
+			height: 250px;
+		}
+
+		.ball {
+			position: absolute;
+			width: fit-content;
+
+			img {
+				width: 100%;
+				opacity: 0;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewXL - 1) {width: 75%;}
+				@media (max-width: $screenViewLG - 1) {width: 65%;}
+				@media (max-width: $screenViewMD - 1) {width: 50%;}
+			}
+
+			&:nth-child(1) {
+				bottom: 75px;
+			    left: 0;
+			    z-index: 3;
+			    animation: mover 5s -0.5s infinite alternate;
+			    transition: all 0.3s ease-in-out;
+
+			    @media (max-width: $screenViewLG - 1) {left: 9%;}
+			    @media (max-width: $screenViewMD - 1) {
+			    	bottom: 60px;
+			    	left: 0;
+			    }
+				
+				&.in {
+				    img {
+						animation: goRight 1.5s 0.3s ease-in-out forwards;
+				    }
+				}
+			}
+
+			&:nth-child(2) {
+				bottom: 290px;
+			    left: 24%;
+			    z-index: 1;
+			    animation: mover 5s -0.3s infinite alternate;
+			    transition: all 0.3s ease-in-out;
+
+			    @media (max-width: $screenViewXL - 1) {bottom: 240px;}
+			    @media (max-width: $screenViewLG - 1) {
+			    	bottom: 217px;
+			    	left: 32%;
+			    }
+			    @media (max-width: $screenViewMD - 1) {
+			    	bottom: 169px;
+		    	    left: 29%;
+			    }
+
+			    &.in {
+				    img {
+						animation: goLeft 1.5s ease-in-out forwards;
+				    }
+				}
+			}
+
+			&:nth-child(3) {
+				bottom: 75px;
+			    left: 48%;
+			    z-index: 2;
+			    animation: mover 5s -1s infinite alternate;
+			    transition: all 0.3s ease-in-out;
+
+			    @media (max-width: $screenViewLG - 1) {left: 55%;}
+			    @media (max-width: $screenViewMD - 1) {
+			    	bottom: 65px;
+			    	left: 60%;
+			    }
+
+			    &.in {
+				    img {
+						animation: goLeft 1.5s 0.5s ease-in-out forwards;
+				    }
+				}
+			}
+
+			@keyframes mover {
+				0% {transform: translate(0, 0);}
+				50% {transform: translate(0, 35px);}
+				100% {transform: translate(0, 0);}
+			}
+		}
+	}
+}
+
+
+
+//==================================================
+// for block_cards
+//==================================================
+.block_cards {
+    padding: 15px 0 30px;
+
+	.card {
+		opacity: 0;
+
+		&.in {animation: goUp 1.5s ease-in-out forwards;}
+
+		&:nth-child(2) {animation-delay: 0.25s;}
+		&:nth-child(3) {animation-delay: 0.5s;}
+		&:nth-child(4) {animation-delay: 0.75s;}
+
+		&:not(:last-child) {
+			border-right: 2px dashed rgba(189,56,68,.5);
+
+			@media (max-width: $screenViewXS - 1) {border-right: 0;}
+		}
+
+		@media (max-width: $screenViewMD - 1) {
+			margin-bottom: 15px;
+
+			&:nth-child(2) {border-right: 0;}
+		}
+
+		a {
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+
+		    div:nth-child(1) {
+		    	margin-right: 15px;
+
+		    	p {
+		    		position: relative;
+		    		font-size: 32px;
+		    		font-weight: bold;
+
+		    		@media (max-width: $screenViewLG - 1) {font-size: 24px;}
+
+		    		img:not(.cardhover) {
+		    			opacity: 1;
+		    			transition: all 0.3s ease-in-out;
+		    		}
+
+		    		img.cardhover {
+		    			position: absolute;
+	    			    top: calc(50% + 4.5px);
+	    			    left: 50%;
+	    			    opacity: 0;
+	    			    transform: translate(-50%, -50%);
+	    			    transition: all 0.3s ease-in-out;
+		    		}
+		    	}
+
+		    	span {
+		    		color: #666666;
+
+		    		@media (max-width: $screenViewLG - 1) {font-size: 14px;}
+		    	}
+		    }
+		}
+
+		&:hover {
+			a {
+				div:nth-child(1) {
+					p {
+						img:not(.cardhover) {opacity: 0;}
+						img.cardhover {opacity: 1;}
+					}
+				}
+			}
+		}
+
+		&:nth-child(1) {
+			a {
+				.cardmove {
+					animation: cardmove 5s -11s infinite alternate;
+
+					@media (max-width: $screenViewXL - 1) {
+						animation: cardmoveRWD 5s -11s infinite alternate;
+					}
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			a {
+				.cardmove {
+					animation: cardmove 5s -19s infinite alternate;
+
+					@media (max-width: $screenViewXL - 1) {
+						animation: cardmoveRWD 5s -19s infinite alternate;
+					}
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			a {
+				.cardmove {
+					animation: cardmove 5s -7s infinite alternate;
+
+					@media (max-width: $screenViewXL - 1) {
+						animation: cardmoveRWD 5s -7s infinite alternate;
+					}
+				}
+			}
+		}
+
+		&:nth-child(4) {
+			a {
+				.cardmove {
+					animation: cardmove 5s -15s infinite alternate;
+
+					@media (max-width: $screenViewXL - 1) {
+						animation: cardmoveRWD 5s -15s infinite alternate;
+					}
+				}
+			}
+		}
+
+		@keyframes cardmove {
+			0% {transform: translate(0, 0) rotateY(0deg);}
+			33% {transform: translate(30px, 0) rotateY(180deg);}
+			66% {transform: translate(30px, 0) rotateY(180deg);}
+			100% {transform: translate(0, 0) rotateY(0deg);}
+		}
+
+		@keyframes cardmoveRWD {
+			0% {transform: translate(0, 0) rotateY(0deg);}
+			33% {transform: translate(10px, 0) rotateY(180deg);}
+			66% {transform: translate(10px, 0) rotateY(180deg);}
+			100% {transform: translate(0, 0) rotateY(0deg);}
+		}
+	}
+}

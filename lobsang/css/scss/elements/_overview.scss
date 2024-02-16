@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+body.overview {
+	.banner {
+		margin-bottom: 50px;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $hamburgerPoint) {margin-bottom: 0;}
+	}
+
+	.footerType2 {margin-top: -40px;}
+}
+
+
+
+.overview_area {
+	position: relative;
+	background: url('../images/bg_overview.png') no-repeat left bottom;
+	background-size: 100% auto;
+
+	.pagefloatL {
+		position: absolute;
+		top: 5%;
+		left: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR1 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR2 {
+		position: absolute;
+		top: 17%;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.about {
+		background: url('../images/bg_about.png') no-repeat center center;
+		background-size: 100% auto;
+
+		@media (max-width: $screenViewMD - 1) {
+			background: url('../images/bg_about.png') no-repeat center top;
+			background-size: 100% auto;
+		}
+		
+		.row {align-items: center;}
+		.row:nth-child(1) {
+			.aboutImg >div >img {
+				@media (max-width: $screenViewMD - 1) {width: 150px;}
+			}
+		}
+		.row:nth-child(2) {
+			@media (min-width: $screenViewSM) {flex-direction: row-reverse;}
+		}
+
+		.aboutImg {
+			display: flex;
+			justify-content: center;
+
+			margin-bottom: 80px;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {
+				justify-content: flex-start;
+				margin-bottom: 10px;
+			}
+
+			>div {
+				>img {margin-bottom: 20px;}
+
+				p {
+				    margin-bottom: 10px;
+					font-size: 15px;
+					font-weight: bold;
+				}
+			}
+		}
+
+		.aboutContent {
+			margin-bottom: 80px;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {margin-bottom: 10px;}
+
+			p {
+				font-size: 18px;
+			    line-height: 2;
+
+				&.ol {
+					color: $web_color_1;
+					font-size: 23px;
+					font-weight: bold;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewLG - 1) {font-size: 20px;}
+
+					img {
+						position: relative;
+						top: -3px;
+					}
+				}
+
+				span {font-weight: bold;}
+
+				br {
+					@media (max-width: $screenViewXS - 1) {display: none;}
+				}
+			}
+		}
+	}
+
+	.history {
+		background: url('../images/bg_history.png') no-repeat center top;
+		background-size: 100% auto;
+
+		@media (max-width: $screenViewMD - 1) {background-size: auto 100%;}
+
+		.milestone {
+			padding: 80px 0 500px;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {padding: 40px 0 250px;}
+			@media (max-width: $screenViewSM - 1) {padding: 0 0 200px;}
+			@media (max-width: $screenViewXS - 1) {padding: 0 0 150px;}
+
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: flex-start;
+				justify-content: space-between;
+
+				@media (max-width: $screenViewMD - 1) {justify-content: flex-end;}
+
+				position: relative;
+				padding-left: 0;
+				list-style: none;
+
+				&:before {
+					position: absolute;
+					content: "";
+					top: 0;
+					left: 50%;
+					width: 4px;
+					height: 100%;
+					background: linear-gradient(to bottom, transparent 0%, #075481 5%, #075481 95%, transparent 100%);
+					transform: translate(-50%, 0%);
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewMD - 1) {left: 15px;}
+				}
+
+				li {
+					position: relative;
+					padding: 10px 15px;
+					width: calc(50% - 30px);
+					background: transparent;
+					border-radius: 15px;
+					opacity: 0;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewMD - 1) {width: calc(100% - 50px);}
+
+					&:not(:first-child) {
+						@media (max-width: $screenViewMD - 1) {margin-top: 40px;}
+					}
+
+					&:nth-child(odd) {
+						text-align: right;
+
+						@media (max-width: $screenViewMD - 1) {text-align: left;}
+
+						.dot {
+							left: calc(100% + 14px);
+							transition: all 0.3s ease-in-out;
+
+							@media (max-width: $screenViewMD - 1) {left: -52px;}
+						}
+
+						&:before {
+							position: absolute;
+							display: none;
+							content: '';
+							top: 26px;
+							left: calc(100% - 1px);
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 9px 0 9px 12px;
+							border-color: transparent transparent transparent #fff;
+							transition: all 0.3s ease-in-out;
+
+							@media (max-width: $screenViewMD - 1) {
+								left: unset;
+								right: calc(100% - 1px);
+								border-width: 9px 12px 9px 0;
+								border-color: transparent #fff transparent transparent;
+							}
+						}
+
+						&.animate {
+							animation: goLeft 1.5s ease-in-out forwards;
+
+							@media (max-width: $screenViewMD - 1) {
+								animation: goUp 1.5s ease-in-out forwards;
+							}
+						}
+					}
+
+					&:nth-child(even) {
+						margin-top: 80px;
+
+						@media (max-width: $screenViewMD - 1) {margin-top: 40px;}
+
+						.dot {
+							right: calc(100% + 14px);
+							transition: all 0.3s ease-in-out;
+
+							@media (max-width: $screenViewMD - 1) {right: calc(100% + 19px);}
+						}
+
+						&:before {
+							position: absolute;
+							display: none;
+							content: '';
+							top: 26px;
+							right: calc(100% - 1px);
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 9px 12px 9px 0;
+							border-color: transparent #fff transparent transparent;
+						}
+
+						&.animate {
+							animation: goRight 1.5s ease-in-out 0.3s forwards;
+
+							@media (max-width: $screenViewMD - 1) {
+								animation: goUp 1.5s ease-in-out forwards;
+							}
+						}
+					}
+
+					.dot {
+						position: absolute;
+						display: block;
+						top: 23px;
+						width: 33px;
+						height: 30px;
+						background: url('../images/overview10.svg') no-repeat;
+					}
+
+					.date {
+						color: $web_color_1;
+						font-size: 36px;
+						font-family: arial;
+						font-style: italic;
+						font-weight: bold;
+						transition: all 0.3s ease-in-out;
+
+						@media (max-width: $screenViewXL - 1) {font-size: 30px;}
+						@media (max-width: $screenViewMD - 1) {font-size: 26px;}
+					}
+
+					.txt {
+						color: $web_color_2;
+						font-size: 24px;
+						font-weight: bold;
+						transition: all 0.3s ease-in-out;
+
+						@media (max-width: $screenViewXL - 1) {font-size: 22px;}
+						@media (max-width: $screenViewMD - 1) {font-size: 18px;}
+
+						img {margin-top: 10px;}
+
+						span {
+							color: #000;
+							font-size: 16px;
+							font-weight: normal;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="23.498px" height="23.5px" viewBox="0 0 23.498 23.5" enable-background="new 0 0 23.498 23.5" xml:space="preserve">
+<g id="bg">
+</g>
+<g id="圖層_3">
+</g>
+<g id="圖層_1">
+	<g>
+		<defs>
+			<rect id="SVGID_307_" x="622.097" y="-605.234" width="326.639" height="404.615"/>
+		</defs>
+		<clipPath id="SVGID_1_">
+			<use xlink:href="#SVGID_307_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_1_)">
+			<defs>
+				<path id="SVGID_309_" d="M948.529-442.612c1.923,13.992-10.112,190.111-14.859,190.764
+					c-4.746,0.652-246.546,51.229-246.546,51.229l-108.539-22.284l-22.137-24.107l64.897-103.307l-29.184-160.519l-6.418-60.499
+					l146.562-19.872L948.529-442.612z"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_309_"  overflow="visible"/>
+			</clipPath>
+			<g transform="matrix(1 0 0 1 -1.220703e-004 3.051758e-005)" clip-path="url(#SVGID_2_)">
+				
+					<image overflow="visible" width="664" height="484" xlink:href="99082E9F.png"  transform="matrix(-1.47 -1.1148 -1.1148 1.47 1034.6875 -414.3398)">
+				</image>
+			</g>
+		</g>
+	</g>
+	
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="4901.1328" y1="-2331.4443" x2="4917.752" y2="-2331.4443" gradientTransform="matrix(-0.7071 -0.7071 0.7071 -0.7071 5131.7798 1834.6514)">
+		<stop  offset="0" style="stop-color:#EDAB2C"/>
+		<stop  offset="1" style="stop-color:#E88C00"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_3_)" points="11.75,0 23.498,11.748 11.75,23.5 0,11.748 	"/>
+</g>
+</svg>

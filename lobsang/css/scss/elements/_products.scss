@@ -1,0 +1,516 @@
+@charset "utf-8";
+
+body.products {
+	.slickBanner {
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.footerType2 {margin-top: -40px;}
+}
+
+.proArea {
+	margin-top: -100px;
+	padding-bottom: 100px;
+	background: url('../images/bg_proArea.png') no-repeat center bottom;
+	transition: all 0.3s ease-in-out;
+
+	@media (max-width: $screenViewXL - 1) {margin-top: -50px;}
+	@media (max-width: 599px) {margin-top: 0px;}
+}
+
+.proPanel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+    padding-top: 0;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: $screenViewLG - 1) {padding-top: 98px;}
+    @media (max-width: $hamburgerPoint) {
+    	position: relative;
+    	padding-top: 50px;
+    	background: url('../images/banner_products.png') no-repeat;
+    	background-size: 100% 100%;
+    }
+
+	>div:nth-child(1) {
+		width: 48%;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewMD - 1) {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 645px;
+		}
+
+		.proInfo {
+			padding-left: calc(100% - 600px);
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewLG - 1) {padding-left: 15px;}
+			@media (max-width: $screenViewMD - 1) {padding: 0 15px;}
+
+			div {
+				padding-left: 25px;
+				border-left: 4px solid #105A97;
+
+				p:nth-child(1) {
+					color: #105A97;
+					font-family: "華康新特明體";
+					font-size: 48px;
+					letter-spacing: 2px;
+				    text-shadow: 1px 1px 5px #999;
+				    transition: all 0.3s ease-in-out;
+
+				    @media (max-width: $screenViewMD - 1) {font-size: 38px;}
+				    @media (max-width: 455px) {font-size: 34px;}
+				}
+
+				p:nth-child(2) {
+					color: #105A97;
+					font-family: "華康新特明體";
+					font-size: 74px;
+					letter-spacing: 10px;
+				    text-shadow: 1px 1px 5px #999;
+				    transition: all 0.3s ease-in-out;
+					
+					@media (max-width: $screenViewLG - 1) {font-size: 62px;}
+				    @media (max-width: $screenViewMD - 1) {font-size: 56px;}
+				    @media (max-width: 455px) {font-size: 38px;}
+
+					span {
+						font-family: "Times New Roman";
+						font-size: 85px;
+						font-weight: bold;
+						transition: all 0.3s ease-in-out;
+						
+						@media (max-width: $screenViewLG - 1) {font-size: 72px;}
+				    	@media (max-width: $screenViewMD - 1) {font-size: 58px;}
+				    	@media (max-width: 455px) {font-size: 40px;}
+					}
+				}
+
+				p:nth-child(3) {
+					font-size: 22px;
+					line-height: 1.7;
+					transition: all 0.3s ease-in-out;
+
+			    	@media (max-width: $screenViewMD - 1) {
+			    		font-size: 20px;
+			    		line-height: 1.5;
+			    	}
+				}
+			}
+		}
+
+		.proLine {
+			margin: 40px 0;
+			width: 100%;
+			height: 1px;
+			background: #105A97;
+		}
+
+		.proBtn {
+			padding-left: calc(100% - 570px);
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewLG - 1) {padding-left: 15px;}
+			@media (max-width: $screenViewMD - 1) {padding: 0 15px;}
+
+			.proText {
+			    margin-bottom: 30px;
+
+				div {
+					display: inline-block;
+					width: 49.5%;
+					font-size: 20px;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewLG - 1) {font-size: 18px;}
+					@media (max-width: 455px) {width: 100%;}
+				}
+			}
+
+			.btnType1_2 {
+				justify-content: space-between;
+
+				a {
+					padding: 9px 30px 8px;
+
+					@media (max-width: $screenViewLG - 1) {padding: 9px 25px 8px;}
+					@media (max-width: 455px) {
+						padding: 9px 5px 8px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	>div:nth-child(2) {
+		width: 52%;
+
+		@media (max-width: $screenViewMD - 1) {display: none;}
+
+		>div {
+			position: relative;
+			width: fit-content;
+
+			.proOther {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				z-index: 1;
+				transform: translate(-50%, 0);
+
+				@media (max-width: $hamburgerPoint) {display: none;}
+
+				a {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+
+					width: 130px;
+				    height: 130px;
+					margin: 0 10px;
+					font-size: 18px;
+				    text-align: center;
+				    background: #fff;
+				    border: 1px solid #105A97;
+				    border-radius: 100%;
+				    box-shadow: 0px 5px 10px 0 #888;
+
+				    &:hover {
+				    	color: #fff;
+						background: #105A97;
+				    }
+				}
+			}
+		}
+	}
+}
+
+
+
+.proBlockTitle {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: $screenViewLG - 1) {margin-top: 100px !important;}
+
+	.proBlockTitleLeft {
+		position: relative;
+		width: 475px;
+		height: 428px;
+		text-align: right;
+		z-index: 2;
+		transition: all 0.3s ease-in-out;
+		
+		@media (max-width: $screenViewLG - 1) {width: 415px;}
+		@media (max-width: $screenViewMD - 1) {
+			width: 333px;
+			height: 421px;
+		}
+		@media (max-width: $screenViewSM - 1) {
+			width: 237px;
+			height: 300px;
+		}
+		@media (max-width: 599px) {display: none;}
+
+		img {
+			width: auto;
+			height: 100%;
+		}
+	}
+
+	.proBlockTitleRight {
+		position: relative;
+		width: calc(100% - 475px);
+		transition: all 0.3s ease-in-out;
+		
+		@media (max-width: $screenViewLG - 1) {width: calc(100% - 415px);}
+		@media (max-width: $screenViewMD - 1) {width: calc(100% - 333px);}
+		@media (max-width: $screenViewSM - 1) {width: calc(100% - 237px);}
+		@media (max-width: 599px) {width: 100%;}
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -250px;
+			left: 0;
+			width: 1049px;
+			height: 603px;
+			background: url('../images/bg_proBlock.png') no-repeat left bottom;
+			background-size: 100% auto;
+			z-index: 0;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: 1525px) {width: 725px;}
+			@media (max-width: $screenViewLG - 1) {
+				width: 610px;
+				height: 400px;
+				top: -55px;
+			}
+			@media (max-width: $screenViewMD - 1) {
+				width: 530px;
+				height: 320px;
+			}
+			@media (max-width: 599px) {
+				width: 100%;
+				height: 270px;
+			}
+		}
+
+		>div:nth-child(1) {
+			position: relative;
+			z-index: 2;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: 599px) {text-align: center;}
+
+			p {
+				font-size: 35px;
+				font-style: italic;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewMD - 1) {font-size: 30px;}
+				@media (max-width: $screenViewSM - 1) {font-size: 28px;}
+				@media (max-width: 455px) {
+					font-size: 24px;
+					letter-spacing: 10px !important;
+				}
+
+				&:nth-child(1) {letter-spacing: 15px;}
+				&:nth-child(2) {
+					letter-spacing: 52px;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewLG - 1) {letter-spacing: 34px;}
+					@media (max-width: $screenViewMD - 1) {letter-spacing: 20px;}
+					@media (max-width: $screenViewSM - 1) {letter-spacing: 15px;}
+				}
+			}
+		}
+
+		>div:nth-child(2) {
+			position: relative;
+			width: 100%;
+			height: 1px;
+			margin: 10px 0 20px;
+			background: #000;
+			z-index: 2;
+		}
+
+		>div:nth-child(3) {
+			position: relative;
+			z-index: 2;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: 599px) {text-align: center;}
+
+			img {
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewLG - 1) {width: 450px;}
+				@media (max-width: $screenViewMD - 1) {width: 350px;}
+				@media (max-width: 599px) {width: 250px;}
+			}
+		}
+
+		>div:nth-child(4) {
+			position: absolute;
+			top: -120px;
+			left: -110px;
+			width: 524px;
+			height: 524px;
+			z-index: 1;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewLG - 1) {
+				top: -80px;
+				left: -60px;
+				width: 450px;
+				height: 450px;
+			}
+			@media (max-width: $screenViewMD - 1) {
+				top: -40px;
+				width: 350px;
+				height: 350px;
+			}
+			@media (max-width: 599px) {
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+	}
+}
+
+
+
+.proPicOnly {
+	text-align: center;
+
+	.pc {
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.mb {
+		display: none;
+
+		@media (max-width: $hamburgerPoint) {display: block;}
+	}
+}
+
+
+
+.proBlock {
+	position: relative;
+	z-index: 1;
+
+	.proBlockItem {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewMD - 1) {margin: 80px 0;}
+		@media (max-width: 599px) {margin: 40px 0;}
+
+		.proBlockText {
+			width: 52%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {
+				margin-bottom: 40px;
+				width: 100%;
+			}
+
+			>div:nth-child(1) {
+				position: relative;
+				padding-left: 28%;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: 599px) {padding-left: 20%}
+
+				div {
+					position: absolute;
+					bottom: 40px;
+					left: 10%;
+					color: #E5E5E5;
+					font-size: 250px;
+					font-family: 'Amperzand';
+					line-height: 0;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewLG - 1) {
+						bottom: 20px;
+						font-size: 190px;
+					}
+					@media (max-width: 599px) {
+						bottom: 0px;
+					    left: 5%;
+						font-size: 120px;
+					}
+					@media (max-width: 455px) {left: 2%;}
+				}
+
+				p {
+					font-size: 55px;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewXL - 1) {font-size: 44px;}
+					@media (max-width: $screenViewLG - 1) {font-size: 38px;}
+					@media (max-width: 599px) {font-size: 30px;}
+					@media (max-width: 455px) {font-size: 26px;}
+				}
+			}
+
+			>div:nth-child(2) {
+				position: relative;
+				width: 100%;
+				height: 1px;
+				margin-bottom: 10px;
+				background: #000;
+				
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					display: block;
+					width: 34px;
+					height: 12px;
+					transform: translate(0, -50%);
+				} 
+			}
+
+			>div:nth-child(3) {
+				padding-left: 28%;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: 599px) {padding-left: 20%}
+
+				p {
+					font-size: 17px;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewSM - 1) {font-size: 16px;}
+
+					br {
+						@media (max-width: $screenViewMD - 1) {display: none;}
+					}
+				}
+			}
+		}
+
+		.proBlockImg {
+			width: 48%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {
+				width: 100%;
+				text-align: center !important;
+			}
+		}
+
+		&:nth-child(odd) {
+			.proBlockText {
+				>div:nth-child(2) {
+					&::before {
+						right: 15px;
+						background: url('../images/products0R.png');
+					}
+				}
+			}
+
+			.proBlockImg {text-align: left;}
+		}
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+
+			.proBlockText {
+				>div:nth-child(2) {
+					&::before {
+						left: 15px;
+						background: url('../images/products0L.png');
+
+						@media (max-width: $screenViewMD - 1) {
+							left: unset;
+							right: 15px;
+							background: url('../images/products0R.png');
+						}
+					}
+				}
+			}
+
+			.proBlockImg {text-align: right;}
+		}
+	}
+}

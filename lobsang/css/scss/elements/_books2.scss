@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+.books2Area {
+	position: relative;
+	background: url('../images/bg_books2.png') no-repeat 98% 99%;
+    overflow: hidden;
+
+	@media (max-width: $hamburgerPoint) {background: unset;}
+
+	.pagefloatL {
+		position: absolute;
+		top: 5%;
+		left: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR1 {
+		position: absolute;
+		top: 1%;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR2 {
+		position: absolute;
+		top: 25%;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.books2_line {
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.books2_block1 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+
+		@media (max-width: $screenViewMD - 1) {flex-direction: column;}
+
+		.books2_block1_img {
+			width: 54%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {
+				margin-bottom: 20px;
+				width: 100%;
+			}
+		}
+
+		.books2_block1_content {
+			width: 44%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {width: 100%;}
+		}
+	}
+
+	.books2_block2 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	    margin: 30px 0;
+
+		@media (max-width: $screenViewMD - 1) {
+			flex-direction: column;
+			margin: 80px 0;
+		}
+		@media (max-width: $screenViewSM - 1) {margin: 40px 0;}
+
+		.books2_block2_img {
+			position: relative;
+			left: -250px;
+			width: 51%;
+			transition: all 0.3s ease-in-out;
+			
+			@media (max-width: $screenViewLG - 1) {
+				left: 0;
+			}
+			@media (max-width: $screenViewMD - 1) {
+				margin-bottom: 20px;
+				width: 100%;
+			}
+
+			>img {
+				position: absolute;
+				bottom: 0;
+				right: -100px;
+				width: 38.89%;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewLG - 1) {
+					right: -10px;
+					width: 100px;
+				}
+			}
+		}
+
+		.books2_block2_content {
+			width: 47%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {width: 100%;}
+		}
+	}
+
+	.books2_block3 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+
+		@media (max-width: $screenViewMD - 1) {flex-direction: column;}
+
+		.books2_block3_img {
+			width: 45%;
+			text-align: right;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {
+				margin-bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.books2_block3_content {
+			width: 55%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewMD - 1) {width: 100%;}
+		}
+	}
+
+	.books2_block4 {
+		margin: 40px 0 100px;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $screenViewMD - 1) {margin: 40px 0 70px;}
+	}
+}

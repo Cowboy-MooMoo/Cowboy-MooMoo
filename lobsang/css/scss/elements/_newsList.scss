@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+body.news {
+	background: url('../images/bg_series.png');
+
+	.banner {
+		margin-bottom: 50px;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $hamburgerPoint) {margin-bottom: 0;}
+	}
+}
+
+.newsList {
+	position: relative;
+	background: unset !important;
+	background-size: unset !important;
+
+	.pagefloatL {
+		position: absolute;
+		top: 5%;
+		left: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR1 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR2 {
+		position: absolute;
+		top: 30%;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.newsListArea {
+		.newsItem {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			padding: 30px 0;
+			border-bottom: 2px dashed rgba(153,51,51,.3);
+
+			@media (max-width: $screenViewSM - 1) {flex-direction: column;}
+
+			&:nth-child(odd) {
+				@media (min-width: $screenViewSM) {flex-direction: row-reverse;}
+			}
+
+			.newsImg {
+				display: block;
+				width: 42%;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewSM - 1) {
+					width: 100%;
+					margin-bottom: 20px;
+				}
+
+				div {
+					position: relative;
+					height: 0;
+					padding-bottom: 51.72%;
+
+					img {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+
+			.newsContent {
+				width: 47%;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewSM - 1) {width: 100%;}
+
+				.newsCategory {
+					margin-bottom: 10px;
+					padding: 2px 25px;
+					width: fit-content;
+					color: #fff;
+					background: $web_color_1;
+				}
+
+				.newsDes {
+					margin-bottom: 30px;
+					height: 72px;
+					color: #000;
+					overflow: hidden;
+					transition: all 0.3s ease-in-out;
+
+					span {transition: all 0.3s ease-in-out;}
+				}
+
+				.btnType1_1 {
+					i {
+						position: relative;
+					    top: 2px;
+					    
+					    @media (min-width: $screenViewSM) {font-size: 20px;}
+					}
+				}
+			}
+		}
+	}
+}

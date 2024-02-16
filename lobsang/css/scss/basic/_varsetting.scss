@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+//==================================================
+// view breakpoint setting
+//==================================================
+$screenViewXL   :1500px;
+$screenViewLG   :1200px;
+$screenViewMD   :992px;
+$screenViewSM   :768px;
+$screenViewXS   :576px;
+$hamburgerPoint :1024px !default; //選單換漢堡 
+
+
+
+//==================================================
+// color setting
+//==================================================
+$web_color_1      : #2D8A3A; //網站第一色系(綠)
+$web_color_2      : #165790; //網站第二色系(藍)
+$web_color_3      : #EB8F00; //網站第三色系(橘)
+
+$font_color       : #000000; //網站字體色系(黑)
+
+$link_color       : $font_color; //連結字體色系
+$link_hover_color : $web_color_1; //連結滑入色系
+
+
+
+//==================================================
+// font setting
+//==================================================
+$font_size    : 16px; //1em
+
+$font_size_h1 : $font_size*2.250; //2.25em  36px
+$font_size_h2 : $font_size*1.875; //1.875em 30px
+$font_size_h3 : $font_size*1.500; //1.5em   24px
+$font_size_h4 : $font_size*1.125; //1.125em 18px
+$font_size_h5 : $font_size;       //1em     16px
+$font_size_h6 : $font_size*0.875; //0.875em 14px
+
+$line_height  : 1.5;
+
+
+@font-face {
+  font-family: 'MyriadPro Bold';
+  src: url('../fonts/lobsang/MyriadPro-Bold.otf');
+}
+
+@font-face {
+  font-family: 'MyriadPro Cond';
+  src: url('../fonts/lobsang/MyriadPro-Cond.otf');
+}
+
+@font-face {
+  font-family: 'Amperzand';
+  src: url('../fonts/lobsang/Amperzand.ttf');
+}

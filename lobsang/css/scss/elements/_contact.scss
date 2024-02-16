@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+body.contact {
+	background: url('../images/bg_series.png');
+}
+
+//==================================================
+// for all contactType
+//==================================================
+.contactForm {
+	position: relative;
+	padding: 100px 0;
+	background: url('../images/bg_seriesDog.png') no-repeat 98% bottom;
+
+	@media (max-width: $hamburgerPoint) {padding: 40px 0;}
+	@media (max-width: $screenViewSM - 1) {background: unset;}
+
+	.pagefloatL {
+		position: absolute;
+		top: 20%;
+		left: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR1 {
+		position: absolute;
+		top: 10%;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.pagefloatR2 {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		z-index: -1;
+
+		@media (max-width: $hamburgerPoint) {display: none;}
+	}
+
+	.container-fluid {
+		max-width: 1230px;
+
+		.contactInfo {
+			position: relative;
+			margin-bottom: 40px;
+	    	padding: 45px 60px 55px;
+			background: url('../images/bg_contactInfo1.png') no-repeat;
+			background-size: 100% 100%;
+			transition: all 0.3s ease-in-out;
+
+			@media (max-width: $screenViewSM - 1) {padding: 30px;}
+
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('../images/bg_contactInfo2.png') no-repeat right top;
+
+				@media (max-width: $screenViewSM - 1) {
+					background-size: 100% 100%
+				}
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('../images/bg_contactInfo3.png') no-repeat right bottom;
+
+				@media (max-width: $screenViewSM - 1) {display: none;}
+			}
+
+			div {
+				position: relative;
+			    z-index: 1;
+
+				p {
+					color: $web_color_2;
+					font-size: 20px;
+				    letter-spacing: 1px;
+				    line-height: 2.1;
+				    transition: all 0.3s ease-in-out;
+
+				    @media (max-width: $screenViewSM - 1) {
+				    	font-size: 18px;
+				    	line-height: 1.5;
+				    }
+
+					&:first-child {
+						margin-bottom: 7px;
+						font-size: 25px;
+						font-weight: bold;
+
+						@media (max-width: $screenViewSM - 1) {font-size: 20px;}
+					}
+
+					a {
+						color: #000;
+
+						span {
+							margin-left: 88px;
+							transition: all 0.3s ease-in-out;
+
+							@media (max-width: $screenViewSM - 1) {
+								margin-left: 80px;
+							}
+							@media (max-width: $screenViewXS - 1) {
+								margin-left: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+//==================================================
+// contactType1 style
+//==================================================
+.contactType1 {
+	form {
+		.formItem {
+			label {
+				display: block;
+				margin-bottom: 15px;
+				color: $web_color_1;
+				font-size: 21px;
+				letter-spacing: 1px;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewSM - 1) {
+					margin-bottom: 5px;
+					font-size: 18px;
+				}
+
+    			&.must::after {
+					content: ' *';
+					color: #ff0000;
+				}
+
+				&.radio {
+					position: relative;
+					display: inline-block;
+					margin-top: 7px;
+					padding: 0 28px 0 30px;
+					color: #000;
+					font-size: 18px;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+
+					@media (max-width: $screenViewSM - 1) {font-size: 16px;}
+
+					.radiobtn {
+						position: absolute;
+						top: 1px;
+						left: 0;
+						width: 25px;
+						height: 25px;
+						background: #fff;
+						border: 1px solid #bbb;
+						border-radius: 50px;
+
+						&::before {
+							position: absolute;
+    						display: none;
+							content: '';
+							top: 7px;
+							left: 7px;
+							width: 9px;
+							height: 9px;
+							background: #808080;
+							border-radius: 50px;
+						}
+					}
+
+					input[type=radio] {
+						position: absolute;						
+						visibility: hidden;
+					}
+
+					&.checked {
+						.radiobtn {
+							border: 1px solid $web_color_1;
+
+							&::before {display: block;}
+						}
+					}
+
+					&.stair {
+						width: 24%;
+						transition: all 0.3s ease-in-out;
+
+						@media (max-width: $screenViewSM - 1) {width: 32%;}
+						@media (max-width: $screenViewXS - 1) {width: 49%;}
+
+						img {
+							display: block;
+							margin-top: 10px;
+						}
+					}
+				}
+
+				&.check {
+					position: relative;
+					display: inline-block;
+					margin-top: 7px;
+					padding: 0 28px 0 30px;
+					color: #000;
+					font-size: 18px;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+					
+					@media (max-width: $screenViewSM - 1) {font-size: 16px;}
+
+					.checkbtn {
+						position: absolute;
+						top: 1px;
+						left: 0;
+						width: 25px;
+						height: 25px;
+						background: #fff;
+						border: 1px solid #bbb;
+						border-radius: 50px;
+
+						&::before {
+							position: absolute;
+    						display: none;
+							content: '';
+							top: 7px;
+							left: 7px;
+							width: 9px;
+							height: 9px;
+							background: #808080;
+							border-radius: 50px;
+						}
+					}
+
+					input[type=checkbox] {
+						position: absolute;	
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;					
+						cursor: pointer;
+						opacity: 0;
+					}
+
+					&.checked {
+						.checkbtn {
+							border: 1px solid $web_color_1;
+
+							&::before {display: block;}
+						}
+					}
+				}
+			}
+
+			input[type=text],
+			input[type=email] {
+				padding: 0 20px;
+				width: 100%;
+				height: 40px;
+			    font-size: 16px;
+				border: 1px solid #bbb;
+    			border-radius: 25px;
+    			transition: all 0.3s ease-in-out;
+
+    			&:focus {border: 1px solid $web_color_1;}
+
+    			&[name=captcha] {
+    				display: inline-block;
+				    margin-bottom: 15px;
+    				max-width: 450px;
+    				transition: all 0.3s ease-in-out;
+
+    				@media (max-width: $screenViewXL - 1) {max-width: 350px;}
+    				@media (max-width: $screenViewLG - 1) {max-width: 290px;}
+    				@media (max-width: $screenViewMD - 1) {max-width: 330px;}
+    				@media (max-width: $screenViewSM - 1) {max-width: 100%;}
+    			}
+			}
+
+			select {
+			    padding: 0 10px;
+			    width: 100%;
+				height: 40px;
+			    font-size: 16px;
+			    border: 1px solid #bbb;
+			    border-radius: 25px;
+			    transition: all 0.3s ease-in-out;
+
+				&:focus {border: 1px solid $web_color_1;}
+			}
+
+			textarea {
+				padding: 10px;
+				width: 100%;
+				height: 100px;
+				resize: none;
+				font-size: 16px;
+				border: 1px solid #bbb;
+				border-radius: 10px;
+				transition: all 0.3s ease-in-out;
+
+				&:focus {border: 1px solid $web_color_1;}
+			}
+
+			.btnType1_2 {
+				&.upload {
+					margin-right: 10px;
+
+					a {
+						position: relative;
+
+						i {font-size: 23px;}
+
+						input[type=file] {
+							position: absolute;
+						    top: 0;
+						    left: 0;
+						    width: calc(100% + 2px);
+						    height: calc(100% + 2px);
+						    cursor: pointer;
+						    opacity: 0;
+						}
+					}
+				}
+
+				&.submit {
+					a {
+						position: relative;
+
+						input[type=submit] {
+							position: absolute;
+						    top: 0;
+						    left: 0;
+						    width: calc(100% + 2px);
+						    height: calc(100% + 2px);
+						    cursor: pointer;
+						    opacity: 0;
+						}
+					}
+				}
+			}
+
+			.valuetarget {
+				font-size: 18px;
+				transition: all 0.3s ease-in-out;
+
+				@media (max-width: $screenViewSM - 1) {font-size: 16px;}
+			}
+
+			&:last-child {
+				@media (max-width: $screenViewSM - 1) {text-align: center;}
+			}
+		}
+	}
+}

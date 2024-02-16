@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+//==================================================
+// global settings
+//==================================================
+*,
+*:before,
+*:after	{box-sizing: border-box;}
+
+*,
+*:focus,
+*:active,
+*:hover {outline: none;}
+
+ul {
+	list-style-type: none;
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+	padding-inline-start: 0em;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: $font_color;
+	font-size: $font_size;
+	font-family: "Microsoft JhengHei","微軟正黑體","sans-serif",arial;
+	line-height: $line_height;
+	background: #ffffff;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	line-height: 1;
+}
+
+h1, .h1 { font-size: $font_size_h1; }
+h2, .h2 { font-size: $font_size_h2; }
+h3, .h3 { font-size: $font_size_h3; }
+h4, .h4 { font-size: $font_size_h4; }
+h5, .h5 { font-size: $font_size_h5; }
+h6, .h6 { font-size: $font_size_h6; }
+
+h1.siteTitle {
+	position: absolute;
+	top: -100%;
+	left: -100%;
+	width: 0;
+	height: 0;
+	color: rgba(255,255,255,0);
+	opacity: 0;
+	z-index: 0;
+}
+
+a {
+	color: $link_color;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+
+	&:hover, 
+	&:focus {
+	    color: $link_hover_color;
+	    text-decoration: none;
+	    outline: 0;
+	}
+	
+	&.underLine {text-decoration: underline;}
+}
+
+p {margin: 0;}
+
+.text-right {text-align: right;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+
+.float-right {float: right;}
+.float-left {float: left;}
+
+.del {
+	color: lighten($web_color_1,30%);
+	text-decoration: line-through;
+}
+
+
+
+//==================================================
+// 預設圖  
+//==================================================
+.noneImg {
+	position: relative;
+	background: rgba($web_color_1,1) !important; //預設圖 背景色
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: auto !important;
+		height: auto !important;
+		min-width: 0 !important;
+		min-height: 0 !important;
+		max-width: 100% !important;
+		max-height: 100% !important;
+		transform: translate(-50%,-50%);
+	}
+	
+}
