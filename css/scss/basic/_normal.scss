@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 //==================================================
 // global settings
 //==================================================
@@ -12,16 +10,21 @@
 *:active,
 *:hover {outline: none;}
 
-ul {
-	list-style-type: none;
-	margin-block-start: 0em;
-	margin-block-end: 0em;
-	padding-inline-start: 0em;
+@keyframes smoothscroll1 {
+	from, to {scroll-behavior: smooth;}
 }
 
-img {
-	max-width: 100%;
-	vertical-align: middle;
+@keyframes smoothscroll2 {
+	from, to {scroll-behavior: smooth;}
+}
+
+html {
+	animation: smoothscroll1 1s;
+}
+
+html:focus-within {
+	animation-name: smoothscroll2;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -29,12 +32,32 @@ body {
 	padding: 0;
 	color: $font_color;
 	font-size: $font_size;
-	font-family: "Microsoft JhengHei","微軟正黑體","sans-serif",arial;
+	font-family: 'Microsoft JhengHei', sans-serif;
 	line-height: $line_height;
-	background: #ffffff;
+	background: #fff;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	//清除文字在iphone的預設大小
+	-webkit-text-size-adjust: none;
+
+	&.noscroll {
+		position: fixed;
+		width: 100%;
+		overflow-y: scroll;
+	}
+}
+
+ol,ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	vertical-align: middle;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -64,19 +87,39 @@ h1.siteTitle {
 a {
 	color: $link_color;
 	text-decoration: none;
-	transition: all 0.3s ease-in-out;
 
-	&:hover, 
-	&:focus {
-	    color: $link_hover_color;
-	    text-decoration: none;
-	    outline: 0;
-	}
-	
-	&.underLine {text-decoration: underline;}
+	&:hover,
+	&:focus,
+	&:active {color: $link_hover_color;}
 }
 
 p {margin: 0;}
+
+button {
+	padding: 0;
+	cursor: pointer;
+}
+
+table {
+	width: 100%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+form {
+	width: 100%;
+	margin: 0 auto;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),textarea,select {
+	font-family: 'Microsoft JhengHei', sans-serif;
+	appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {appearance: none;}
+input[type="number"] {-moz-appearance:textfield;}
 
 .text-right {text-align: right;}
 .text-left {text-align: left;}
@@ -85,31 +128,7 @@ p {margin: 0;}
 .float-right {float: right;}
 .float-left {float: left;}
 
-.del {
-	color: lighten($web_color_1,30%);
-	text-decoration: line-through;
-}
+.underline {text-decoration: underline;}
+.del {text-decoration: line-through;}
 
-
-
-//==================================================
-// 預設圖  
-//==================================================
-.noneImg {
-	position: relative;
-	background: rgba($web_color_1,1) !important; //預設圖 背景色
-
-	img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: auto !important;
-		height: auto !important;
-		min-width: 0 !important;
-		min-height: 0 !important;
-		max-width: 100% !important;
-		max-height: 100% !important;
-		transform: translate(-50%,-50%);
-	}
-	
-}
+.break-all {word-break: break-all;}
