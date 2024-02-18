@@ -27,22 +27,22 @@
 *:active,
 *:hover {outline: none;}
 
-@keyframes smoothscroll1 {
-	from, to {scroll-behavior: smooth;}
-}
+// @keyframes smoothscroll1 {
+// 	from, to {scroll-behavior: smooth;}
+// }
 
-@keyframes smoothscroll2 {
-	from, to {scroll-behavior: smooth;}
-}
+// @keyframes smoothscroll2 {
+// 	from, to {scroll-behavior: smooth;}
+// }
 
-html {
-	animation: smoothscroll1 1s;
-}
+// html {
+// 	animation: smoothscroll1 1s;
+// }
 
-html:focus-within {
-	animation-name: smoothscroll2;
-	scroll-behavior: smooth;
-}
+// html:focus-within {
+// 	animation-name: smoothscroll2;
+// 	scroll-behavior: smooth;
+// }
 
 body {
 	color: $web_color_5;
@@ -55,6 +55,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: none; //清除文字在iphone的預設大小
+
+	&::-webkit-scrollbar {display: none;}
 
 	&.no_overflow {overflow: hidden;}
 }

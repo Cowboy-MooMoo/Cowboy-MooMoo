@@ -28,8 +28,13 @@
 
 		&.slick-hidden {display: none !important;}
 
-		&.slick-prev {left: 5px;}
-		&.slick-next {right: 5px;}
+		&.slick-disabled {
+			pointer-events: none;
+			opacity: .1;
+		}
+
+		&.slick-prev {left: 0;}
+		&.slick-next {right: 0;}
 	}
 }
 
@@ -57,8 +62,8 @@
 
 	&:before,
 	&:after {
-		display: table;
 		content: '';
+		display: table;
 	}
 	&:after {clear: both;}
 }
@@ -103,21 +108,18 @@
 	transform: translate(-50%,0%);
 	transition: all 0.1s;
 
-	@media (max-width: 768px) {bottom: 7px;}
-
 	li {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 20px;
 		height: 20px;
-		margin: 0 2px;
 		cursor: pointer;
 		transition: all 0.1s;
 
 		@media (max-width: 768px) {
-			width: 10px;
-			height: 10px;
+			width: 16px;
+			height: 16px;
 		}
 
 		button {
@@ -125,14 +127,14 @@
 			height: 10px;
 			color: transparent;
 			font-size: 0;
-			background: #ccc;
-			border: 0;
+			background: #c9caca;
+			// border: 1px solid $web_color_1;
 			border-radius: 50%;
 			transition: all 0.1s;
 
 			@media (max-width: 768px) {
-				width: 5px;
-				height: 5px;
+				width: 8px;
+				height: 8px;
 			}
 		}
 

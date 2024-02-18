@@ -8,9 +8,9 @@
 
 
 
-.bridge {
+#bridge {
 	position: relative;
-	height: 100vh; //800px
+	height: 100vh;
 	overflow: hidden;
 
 	@media (max-width: 1199px) {height: 800px;}
@@ -283,10 +283,10 @@
 
 		.the_crew {
 			position: absolute;
-			bottom: 4.1667vw; //80
+			bottom: calc(80 / 19.2 * 1vw);
 			right: 50%;
-			width: 5.2083vw; //100
-			margin-right: -14.84375vw; //-285
+			width: calc(100 / 19.2 * 1vw);
+			margin-right: calc(0vw - 285 / 19.2 * 1vw);
 			filter: brightness(0.1);
 			pointer-events: none;
 			user-select: none;
@@ -297,7 +297,7 @@
 				width: 89px;
 				margin-right: -252px;
 			}
-			@media (max-width: 1199px) {display: none;}
+			@media (max-width: 959px) {display: none;}
 		}
 
 		.corner_console {
@@ -633,4 +633,157 @@
 			}
 		}
 	}
+}
+
+
+
+.guide {
+	position: sticky;
+	top: 0;
+	width: 90%;
+	max-width: 1280px;
+	margin: 0 auto -60px;
+	padding: 3px;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(2px);
+	border: 2px solid $web_color_8;
+	border-radius: 6px;
+	z-index: 100;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: calc(100% + 2px);
+		left: 5px;
+		width: 108px;
+		height: 60px;
+		background: url('../img/navigation-wires.png') no-repeat;
+		background-size: 100% 100%;
+
+		@media (max-width: 1199px) {
+			width: 81px;
+			height: 45px;
+		}
+		@media (max-width: 639px) {display: none;}
+	}
+
+	.guide_inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0 calc(100 / 19.2 * 1vw);
+		height: 50px;
+		border: 1px solid $web_color_7;
+		border-radius: 4px;
+
+		a {
+			color: $web_color_1;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-indent: 1px;
+
+			&:hover {color: $web_color_4;}
+		}
+	}
+}
+
+
+
+#commander {
+	height: 550px;
+	background-image: url('../img/divider-hinges-detail.png'), url('../img/divider-hinges.png'), url('../img/backdrop-grid.png');
+	background-position: center bottom -2px, center bottom, left top;
+	background-repeat: no-repeat, repeat-x, repeat-x;
+
+	&::before {
+		content: '';
+		display: block;
+		height: 120px;
+	}
+
+	.commander_content {
+		display: flex;
+
+		.commander_file {
+			width: calc(100% - 380px);
+		}
+
+		.commander_avatar {
+			flex-shrink: 0;
+			width: 380px;
+
+			.commander_frame {
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 380px;
+					height: 280px;
+					background: url('../img/callout-arm.png') no-repeat;
+					background-size: 100% 100%;
+				}
+
+				.commander_screen {
+					position: relative;
+					top: 67px;
+					left: 10px;
+					width: 235px;
+					height: 300px;
+					padding: 3px;
+					background: rgba(0, 0, 0, 0.8);
+					border: 2px solid $web_color_8;
+					border-radius: 6px;
+
+					.commander_inner {
+						position: relative;
+						height: 100%;
+						padding: 1px;
+						border: 1px solid $web_color_7;
+						border-radius: 4px;
+						overflow: hidden;
+
+						&::after {
+							content: '';
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+							background-size: 100% 100%, 1px 3px;
+						}
+
+						img {
+							filter: brightness(0.85);
+							transition: filter 0.2s;
+						}
+					}
+				}
+
+				&:hover {
+					.commander_screen {
+						.commander_inner {
+							img {filter: brightness(1.05);}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+#work {
+	height: 100vh;
+}
+
+
+
+#contact {
+	height: 100vh;
 }
