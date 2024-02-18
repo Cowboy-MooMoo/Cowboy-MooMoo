@@ -691,22 +691,60 @@
 
 
 #commander {
-	height: 550px;
+	min-height: 550px;
+	padding: 120px 0;
 	background-image: url('../img/divider-hinges-detail.png'), url('../img/divider-hinges.png'), url('../img/backdrop-grid.png');
 	background-position: center bottom -2px, center bottom, left top;
 	background-repeat: no-repeat, repeat-x, repeat-x;
-
-	&::before {
-		content: '';
-		display: block;
-		height: 120px;
-	}
 
 	.commander_content {
 		display: flex;
 
 		.commander_file {
 			width: calc(100% - 380px);
+
+			.commander_name {
+				margin-bottom: 20px;
+
+				p:nth-child(1) {
+					color: #fff;
+					font-size: 34px;
+					font-weight: 700;
+					font-family: $web_font_3;
+					margin-bottom: 5px;
+				}
+
+				p:nth-child(2) {
+					color: #fff;
+					font-size: 21px;
+					font-family: $web_font_2;
+				}
+			}
+
+			.commander_exp {
+				p {
+					font-family: $web_font_2;;
+
+					&+p:not(.hidden) {margin-top: 10px;}
+
+					span {
+						color: $web_color_6;
+						font-size: 16px;
+						padding-right: 10px;
+					}
+
+					a {
+						color: $web_color_5;
+						font-size: 16px;
+
+						&:hover {color: $web_color_6;}
+					}
+
+					&.hidden {
+						span {visibility: hidden;}
+					}
+				}
+			}
 		}
 
 		.commander_avatar {
