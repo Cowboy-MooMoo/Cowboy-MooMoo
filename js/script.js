@@ -44,6 +44,16 @@ $(document).ready(function(){
 		// $('.bridge_header, .toggle_volume, .get_in_touch').show();
 	});
 
+	//get_in_touch
+	$('.info_btn').on('click', function(){
+		$('body').addClass('no_overflow');
+		$('.summon_ways').addClass('active');
+	});
+	$('.summon_exit').on('click', function(){
+		$('body').removeClass('no_overflow');
+		$('.summon_ways').removeClass('active');
+	});
+
 	//guide anchor
 	$('.guide .guide_inner a').on('click', function(){
 		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname){
