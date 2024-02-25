@@ -419,7 +419,7 @@
 									right: 0;
 									bottom: 0;
 									left: 0;
-									background: rgba($web_color_1, 0.25);
+									background: rgba($web_color_1, 0.1);
 									z-index: 2;
 								}
 
@@ -665,12 +665,12 @@
 		}
 
 		&::before {
-			top: -17px;
+			top: -15px;
 			left: -12px;
 		}
 
 		&::after {
-			bottom: -17px;
+			bottom: -15px;
 			left: -12px;
 			transform: scale(1,-1);
 		}
@@ -686,78 +686,85 @@
 			}
 
 			&::before {
-				top: -17px;
+				top: -15px;
 				right: -12px;
 				transform: scale(-1,1);
 			}
 
 			&::after {
-				bottom: -17px;
+				bottom: -15px;
 				right: -12px;
 				transform: scale(-1,-1);
 			}
 
 			.summon_content {
-				display: flex;
-				align-items: center;
-				flex-direction: column;
-				text-align: center;
 				padding: 30px 20px 10px;
 
-				.summon_target {
-					position: relative;
-					margin-bottom: 16px;
+				>div {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					text-align: center;
+					max-height: calc(100vh - 94px);
+					overflow-y: auto;
 
-					img {filter: brightness(1.05);}
+					&::-webkit-scrollbar {display: none;}
 
-					&::after {
-						content: '';
-						position: absolute;
-						top: 0;
-						right: 0;
-						bottom: 0;
-						left: 0;
-						background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
-						background-size: 100% 100%, 1px 3px;
-					}
-				}
+					.summon_target {
+						position: relative;
+						margin-bottom: 16px;
 
-				a {
-					color: $web_color_6;
-					font-size: 21px;
-					font-family: $web_font_2;
+						img {filter: brightness(1.05);}
 
-					&+a {margin-top: 10px;}
-
-					@media (max-width: 639px) {font-size: 18px;}
-
-					&:hover {
-						@media (min-width: 1025px) {color: $web_color_10;}
-					}
-				}
-
-				.summon_exit {
-					color: $web_color_2;
-					font-size: 21px;
-					font-family: $web_font_2;
-					margin-top: 30px;
-
-					@media (max-width: 639px) {font-size: 18px;}
-
-					span {
-						display: inline-block;
-						font-size: 24px;
-
-						@media (max-width: 639px) {font-size: 22px;}
-
-						&:first-letter {
-							color: $web_color_3;
-							text-transform: uppercase;
+						&::after {
+							content: '';
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+							background-size: 100% 100%, 1px 3px;
 						}
 					}
 
-					&:hover {
-						color: $web_color_3;
+					a {
+						color: $web_color_6;
+						font-size: 21px;
+						font-family: $web_font_2;
+
+						&+a {margin-top: 10px;}
+
+						@media (max-width: 639px) {font-size: 18px;}
+
+						&:hover {
+							@media (min-width: 1025px) {color: $web_color_10;}
+						}
+					}
+
+					.summon_exit {
+						color: $web_color_2;
+						font-size: 21px;
+						font-family: $web_font_2;
+						margin-top: 30px;
+
+						@media (max-width: 639px) {font-size: 18px;}
+
+						span {
+							display: inline-block;
+							font-size: 24px;
+
+							@media (max-width: 639px) {font-size: 22px;}
+
+							&:first-letter {
+								color: $web_color_3;
+								text-transform: uppercase;
+							}
+						}
+
+						&:hover {
+							color: $web_color_3;
+						}
 					}
 				}
 			}
