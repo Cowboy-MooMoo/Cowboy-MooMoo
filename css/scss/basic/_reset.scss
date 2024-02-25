@@ -56,7 +56,9 @@ body {
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: none; //清除文字在iphone的預設大小
 
-	&::-webkit-scrollbar {display: none;}
+	&::-webkit-scrollbar {width: 1px;}
+	&::-webkit-scrollbar-thumb {background: $web_color_7;}
+	&::-webkit-scrollbar-thumb:hover {background: $web_color_9;}
 
 	&.no_overflow {overflow: hidden;}
 }

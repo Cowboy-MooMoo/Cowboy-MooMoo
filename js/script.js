@@ -78,42 +78,50 @@ $(document).ready(function(){
 		}
 	});
 
+	//work section
+	$('.work_age .age').on('click', function(){
+		$(this).addClass('active');
+		$(this).siblings('.age').removeClass('active');
+	});
+
 
 	//sound effect setting
-	$('.mouseover').mouseenter(function(){
-		let mouseover = new Audio('sound/over.wav');
-		mouseover.play();
-	});
-
-	$('.mousebutton').on('click', function(){
-		let mousebutton = new Audio('sound/button.wav');
-		mousebutton.play();
-	});
-
-	$('.mousedown').on('click', function(){
-		let mousedown = new Audio('sound/down.wav');
-		mousedown.play();
-	});
-
-	$('.mousedownin').on('click', function(){ //total 1.3s
-		let mousedown = new Audio('sound/down.wav'); //0.4s
-		let mousein = new Audio('sound/swishin.wav');
-		let mouselock = new Audio('sound/swishlock.wav');
-		mousedown.play();
-		mousedown.addEventListener('ended', function(){
-			mousein.play();
+	if(window.matchMedia('(min-width: 1025px)').matches){
+		$('.mouseover').mouseenter(function(){
+			let mouseover = new Audio('sound/over.wav');
+			mouseover.play();
 		});
-		mousein.addEventListener('ended', function(){
-			mouselock.play();
-		});
-	});
 
-	$('.mousedownout').on('click', function(){ //total 0.6s
-		let mousedown = new Audio('sound/down.wav'); //0.3s
-		let mouseout = new Audio('sound/swishout.wav');
-		mousedown.play();
-		mousedown.addEventListener('ended', function(){
-			mouseout.play();
+		$('.mousebutton').on('click', function(){
+			let mousebutton = new Audio('sound/button.wav');
+			mousebutton.play();
 		});
-	});
+
+		$('.mousedown').on('click', function(){
+			let mousedown = new Audio('sound/down.wav');
+			mousedown.play();
+		});
+
+		$('.mousedownin').on('click', function(){ //total 1.3s
+			let mousedown = new Audio('sound/down.wav'); //0.4s
+			let mousein = new Audio('sound/swishin.wav');
+			let mouselock = new Audio('sound/swishlock.wav');
+			mousedown.play();
+			mousedown.addEventListener('ended', function(){
+				mousein.play();
+			});
+			mousein.addEventListener('ended', function(){
+				mouselock.play();
+			});
+		});
+
+		$('.mousedownout').on('click', function(){ //total 0.6s
+			let mousedown = new Audio('sound/down.wav'); //0.3s
+			let mouseout = new Audio('sound/swishout.wav');
+			mousedown.play();
+			mousedown.addEventListener('ended', function(){
+				mouseout.play();
+			});
+		});
+	}
 });
