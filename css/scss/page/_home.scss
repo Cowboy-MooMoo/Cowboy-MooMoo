@@ -750,7 +750,12 @@
 						margin-top: 16px;
 
 						>a {
+							padding: 5px;
+							border: 1px solid $web_color_6;
+							-webkit-box-reflect: below 5px linear-gradient(transparent, rgba(#111,.2));
+
 							svg {
+								display: block;
 								fill: $web_color_6;
 								filter: drop-shadow(0 0 5px rgba($web_color_6, 0.5));
 
@@ -761,6 +766,10 @@
 							}
 
 							&:hover {
+								@media (min-width: 1025px) {
+									border: 1px solid $web_color_10;
+								}
+
 								svg {
 									@media (min-width: 1025px) {
 										fill: $web_color_10;
@@ -775,7 +784,7 @@
 						color: $web_color_2;
 						font-size: 21px;
 						font-family: $web_font_2;
-						margin-top: 30px;
+						margin-top: 50px;
 
 						@media (max-width: 639px) {font-size: 18px;}
 
@@ -1253,6 +1262,7 @@
 						position: relative;
 						height: 0;
 						padding-bottom: calc(919 / 1903 * 100%);
+						background: #000;
 						border-radius: 16px;
 						isolation: isolate;
 						overflow: hidden;
@@ -1265,6 +1275,26 @@
 							height: 100%;
 							object-fit: cover;
 							z-index: 1;
+						}
+
+						&::before {
+							content: 'OFFLINE';
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							color: $web_color_9;
+							font-size: 20px;
+							font-weight: 700;
+							font-family: $web_font_2;
+							letter-spacing: 2px;
+							text-indent: 2px;
+							opacity: 0;
+							z-index: 2;
 						}
 
 						&::after {
@@ -1299,14 +1329,66 @@
 				margin-top: 15px;
 
 				@media (max-width: 639px) {font-size: 15px;}
-				@media (max-width: 480px) {font-size: 14px;}
+				@media (max-width: 480px) {
+					font-size: 14px;
+					margin-top: 10px;
+				}
 			}
 
 			&.offline {
 				>a {
 					>div {
 						>div {
+							img {opacity: 0.25;}
 
+							&::before {opacity: 1;}
+						}
+					}
+
+					&:hover {
+						>div {
+							>div {
+								&::before {
+									@media (min-width: 1025px) {
+										animation: jitter 0.225s ease-in-out 2 forwards;
+									}
+
+									@keyframes jitter {
+										0% {
+											transform: translateX(0px) translateY(0px);
+											opacity: 1;
+										}
+										10% {
+											transform: translateX(2px) translateY(2px);
+											opacity: 0.8;
+										}
+										20% {
+											transform: translateX(0px) translateY(0px);
+											opacity: 0.47;
+										}
+										30% {
+											transform: translateX(0px) translateY(2px);
+											opacity: 0.3;
+										}
+										70% {
+											transform: translateX(-1px) translateY(1px);
+											opacity: 0.96;
+										}
+										80% {
+											transform: translateX(0px) translateY(-2px);
+											opacity: 0.9;
+										}
+										90% {
+											transform: translateX(1px) translateY(-2px);
+											opacity: 0.81;
+										}
+										100% {
+											transform: translateX(0) translateY(0);
+											opacity: 1;
+										}
+									}
+								}
+							}
 						}
 					}
 				}
