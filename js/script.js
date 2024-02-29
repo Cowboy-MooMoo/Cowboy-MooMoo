@@ -80,8 +80,13 @@ $(document).ready(function(){
 
 	//work section
 	$('.work_age .age').on('click', function(){
+		let age = $(this).data('age');
+
 		$(this).addClass('active');
 		$(this).siblings('.age').removeClass('active');
+
+		$('.work_list[data-age="' + age + '"]').addClass('active');
+		$('.work_list:not([data-age="' + age + '"])').removeClass('active');
 	});
 
 
