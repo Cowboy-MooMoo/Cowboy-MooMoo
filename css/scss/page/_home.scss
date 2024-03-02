@@ -27,7 +27,7 @@
 		will-change: transform;
 		z-index: -1;
 
-		// @media (max-width: 639px) {display: none;}
+		@media (max-width: 639px) {display: none;}
 
 		&::before,
 		&::after {
@@ -65,7 +65,6 @@
 		@media (max-width: 639px) {
 			position: unset;
 			height: unset;
-			// background: unset;
 		}
 
 		.bridge_overlay_backdrop {
