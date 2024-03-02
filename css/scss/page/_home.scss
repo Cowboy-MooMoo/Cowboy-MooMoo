@@ -1048,8 +1048,8 @@
 	position: relative;
 	padding: 120px 0;
 	background-image: url('../img/divider.jpg'), url('../img/backdrop-stars.jpg');
-	background-size: 1920px 19px, 1400px 700px;
-	background-position: center bottom, left top;
+	background-size: 1920px 19px, 100% auto;
+	background-position: center bottom, center top;
 	background-repeat: no-repeat, repeat;
 
 	@media (max-width: 639px) {padding: 90px 0 80px;}
@@ -1445,5 +1445,95 @@
 
 
 #contact {
-	
+	position: relative;
+	padding: 70px 0;
+
+	@media (max-width: 639px) {padding: 50px 0;}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url('../img/social.webp') no-repeat center center / cover;
+		opacity: 0.3;
+		z-index: -1;
+	}
+
+	.contact_content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		.cowboy_hat {
+			margin-bottom: 40px;
+
+			@media (max-width: 639px) {display: none;}
+		}
+
+		>a {
+			color: $web_color_6;
+			font-size: 21px;
+			font-family: $web_font_2;
+
+			&+a {margin-top: 10px;}
+
+			@media (max-width: 639px) {font-size: 18px;}
+
+			&:hover {
+				@media (min-width: 1025px) {color: $web_color_10;}
+			}
+		}
+
+		.social_media {
+			display: flex;
+			justify-content: center;
+			gap: 10px 15px;
+			margin-top: 16px;
+
+			>a {
+				padding: 5px;
+				border: 1px solid $web_color_6;
+				-webkit-box-reflect: below 5px linear-gradient(transparent, rgba(#111,.2));
+
+				svg {
+					display: block;
+					fill: $web_color_6;
+					filter: drop-shadow(0 0 5px rgba($web_color_6, 0.5));
+
+					@media (max-width: 639px) {
+						width: 20px;
+						height: 20px;
+					}
+				}
+
+				&:hover {
+					@media (min-width: 1025px) {
+						border: 1px solid $web_color_10;
+					}
+
+					svg {
+						@media (min-width: 1025px) {
+							fill: $web_color_10;
+							filter: drop-shadow(0 0 5px rgba($web_color_10, 0.5));
+						}
+					}
+				}
+			}
+		}
+
+		.copyright {
+			color: $web_color_6;
+			font-size: 14px;
+			font-family: $web_font_2;
+			line-height: 1.2;
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 50px;
+
+			@media (max-width: 639px) {font-size: 13px;}
+		}
+	}
 }
