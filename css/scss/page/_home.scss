@@ -730,7 +730,7 @@
 					}
 
 					.summon_commander {
-						margin-bottom: 16px;
+						margin-bottom: 12px;
 
 						p {
 							color: #fff;
@@ -739,11 +739,6 @@
 							font-family: $web_font_3;
 
 							@media (max-width: 639px) {font-size: 21px;}
-
-							.sc_style {
-								text-indent: 2.5px;
-								transform-origin: center;
-							}
 						}
 					}
 

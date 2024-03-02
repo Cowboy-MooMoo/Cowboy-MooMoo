@@ -22,4 +22,9 @@
 	letter-spacing: 2.5px;
 	transform-origin: left center;
 	transform: scaleX(1.25);
+
+	&.center {
+		text-indent: 2.5px;
+		transform-origin: center;
+	}
 }
