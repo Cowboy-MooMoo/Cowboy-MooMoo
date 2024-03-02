@@ -729,6 +729,24 @@
 						}
 					}
 
+					.summon_commander {
+						margin-bottom: 16px;
+
+						p {
+							color: #fff;
+							font-size: 23px;
+							font-weight: 700;
+							font-family: $web_font_3;
+
+							@media (max-width: 639px) {font-size: 21px;}
+
+							.sc_style {
+								text-indent: 2.5px;
+								transform-origin: center;
+							}
+						}
+					}
+
 					>a {
 						color: $web_color_6;
 						font-size: 21px;
@@ -1400,5 +1418,5 @@
 
 
 #contact {
-	height: 100vh;
+	
 }
