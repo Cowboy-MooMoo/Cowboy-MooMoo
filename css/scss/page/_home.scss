@@ -1045,13 +1045,39 @@
 
 
 #work {
+	position: relative;
 	padding: 120px 0;
-	background-image: url('../img/divider.jpg'), url('../img/return-starmap.png'), url('../img/backdrop-stars.jpg');
-	background-size: 1920px 19px, 100% auto, 1400px 700px;
-	background-position: center bottom, center top, left top;
-	background-repeat: no-repeat, no-repeat, repeat;
+	background-image: url('../img/divider.jpg'), url('../img/backdrop-stars.jpg');
+	background-size: 1920px 19px, 1400px 700px;
+	background-position: center bottom, left top;
+	background-repeat: no-repeat, repeat;
 
 	@media (max-width: 639px) {padding: 90px 0 80px;}
+
+	.starmap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		@media (max-width: 1199px) {top: 50px;}
+		@media (max-width: 959px) {display: none;}
+
+		&::before {
+			content: '';
+			display: block;
+			position: sticky;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(1177 / 19.2 * 1vw);
+			background-image: url('../img/return-starmap.png');
+			background-size: 100% auto;
+			background-position: center top;
+			background-repeat: no-repeat;
+		}
+	}
 
 	.work_age {
 		display: flex;
@@ -1343,6 +1369,7 @@
 			}
 
 			>p {
+				position: relative;
 				text-align: center;
 				margin-top: 15px;
 
