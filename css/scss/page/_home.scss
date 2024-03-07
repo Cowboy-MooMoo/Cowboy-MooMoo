@@ -1051,9 +1051,10 @@
 	.starmap {
 		position: absolute;
 		top: 0;
-		bottom: 0;
+		bottom: 19px;
 		left: 0;
 		right: 0;
+		overflow: hidden;
 
 		@media (max-width: 1199px) {top: 50px;}
 		@media (max-width: 959px) {display: none;}
@@ -1075,15 +1076,13 @@
 
 	.work_age {
 		display: flex;
-		justify-content: center;
 		gap: 0 calc(30 / 19.2 * 1vw);
 		overflow-x: auto;
 
 		@media (max-width: 1024px) {gap: 0 16px;}
-		@media (max-width: 639px) {justify-content: flex-start;}
 
 		.age {
-			width: calc(100% / 3);
+			width: 100%;
 			min-width: 180px;
 			max-width: 230px;
 
