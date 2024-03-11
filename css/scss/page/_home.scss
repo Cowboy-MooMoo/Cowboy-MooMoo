@@ -1054,7 +1054,7 @@
 		bottom: 19px;
 		left: 0;
 		right: 0;
-		overflow: hidden;
+		overflow: clip;
 
 		@media (max-width: 1199px) {top: 50px;}
 		@media (max-width: 959px) {display: none;}
