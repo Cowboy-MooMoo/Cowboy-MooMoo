@@ -8,6 +8,11 @@ $(document).ready(function(){
 	});
 	$('.toggle_volume_space').on('click', function(){
 		$('#space').YTPToggleVolume();
+
+		if($('.coding_on').css('display') === 'inline'){
+			$('.toggle_volume_coding').click();
+		}
+
 		$('.space_on, .space_off').toggle();
 	});
 
@@ -20,6 +25,11 @@ $(document).ready(function(){
 	});
 	$('.toggle_volume_coding').on('click', function(){
 		$('#coding_video').YTPToggleVolume();
+
+		if($('.space_on').css('display') === 'inline'){
+			$('.toggle_volume_space').click();
+		}
+		
 		$('.coding_on, .coding_off').toggle();
 	});
 
