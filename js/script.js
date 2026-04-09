@@ -1,4 +1,5 @@
-$(document).ready(function(){
+// $(document).ready(function(){
+$(window).on('load',function(){
 	//space sound
 	$('#space').YTPlayer();
 	$('.toggle_volume_space').hover(function(){
@@ -29,7 +30,7 @@ $(document).ready(function(){
 		if($('.space_on').css('display') === 'inline'){
 			$('.toggle_volume_space').click();
 		}
-		
+
 		$('.coding_on, .coding_off').toggle();
 	});
 
